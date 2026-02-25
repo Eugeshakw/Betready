@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     html,
     body {
     height: 100%;
-    font-family: 'Poppins', sans-serif; 
+    font-family:  "Roboto", sans-serif;
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #000;

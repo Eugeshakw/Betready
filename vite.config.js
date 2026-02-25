@@ -1,21 +1,20 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
 import svgr from "vite-plugin-svgr";
+import react from '@vitejs/plugin-react';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-// Получаем `__dirname` в ESM-формате
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), 
+  plugins: [
     svgr({
       include: "**/*.svg",
     }),
+    react(),
   ],
-  base: '/main/', // Устанавливаем базовый путь для всех ресурсов
+  base: '/main/',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {
@@ -28,4 +27,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['styled-components'],
   },
-})
+});
