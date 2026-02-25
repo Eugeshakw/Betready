@@ -3,7 +3,8 @@ import logoTop from '../../assets/images/logoTop.png';
 import giftIcon from '../../assets/images/Gift.png';
 import Ticket from '../../assets/images/Ticket.png';
 import Dollar from '../../assets/images/Dollar.png';
-import Setting from '../../assets/images/Settings.png'
+import Setting from '../../assets/images/Settings.png';
+import GreatBritain from '../../assets/images/GreatBritain.png';
 
 const TopBarWrapper = styled.div`
   background: #00251d;;
@@ -40,36 +41,60 @@ const IconBtn = styled.button`
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  
   cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+
+  &:hover {
+    background: #63d92b;
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 2px 8px rgba(99, 217, 43, 0.2);
+  }
 `;
 
 const RegistrationBtn = styled.button`
-    border-radius: 8px;
-    width: 130px;
-    height: 32px;
-    font-weight: 400;
+  border-radius: 8px;
+  width: 130px;
+  height: 32px;
+  background: #397617;
+  border: none;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
     background: #63d92b;
-    color: #fff;
-    border: none;
-    /* font-weight: bold; */
-    font-weight: 400;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+    box-shadow: 0 2px 12px rgba(99, 217, 43, 0.3);
+    transform: translateY(-2px) scale(1.03);
+  }
 `;
 
 const LoginBtn = styled.button`
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 8px;
-    width: 76px;
-    height: 32px;
-    background: #397617;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-radius: 8px;
+  width: 76px;
+  height: 32px;
+  background: #397617;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+
+  &:hover {
+    background: #63d92b;
+    box-shadow: 0 2px 12px rgba(99, 217, 43, 0.2);
+    transform: translateY(-2px) scale(1.05);
+  }
 `;
 
 const StatusBlock = styled.div`
@@ -78,6 +103,8 @@ const StatusBlock = styled.div`
   background: #397617;
   border-radius: 8px;
   height: 32px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   
 `;
 
@@ -90,19 +117,26 @@ const Divider = styled.div`
 const StatusBtn = styled.button`
   background: transparent;
   border: none;
-  color: #fff;
-  font-size: 1.2rem;
   display: flex;
   align-items: center;
   cursor: pointer;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: color 0.2s, background 0.2s;
+
+  &:hover {
+    color: #8fd14f;
+    background: rgba(143, 209, 79, 0.08);
+    border-radius: 8px;
+  }
 `;
 
-const Flag = styled.img`
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  margin-right: 6px;
-`;
+
 
 export const TopBar = () => (
   <TopBarWrapper>
@@ -133,7 +167,7 @@ export const TopBar = () => (
       </StatusBtn>
       <Divider />
       <StatusBtn>
-        {/* <Flag src={flagEn} alt="EN" /> */}
+        <img src={GreatBritain} alt="EN" />
         EN / 00:09
         <span style={{ marginLeft: 4, display: 'flex', alignItems: 'center' }}>
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

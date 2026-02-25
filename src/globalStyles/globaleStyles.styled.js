@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #000;
-    background-color: #fff;
+    background-color: #00251D;
     /* color: ${(props) => props.theme.color.primary_white};
     background-color: ${(props) => props.theme.color.primary_black}; */
     -webkit-font-smoothing: antialiased;

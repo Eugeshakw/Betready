@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 const HeaderWrapper = styled.header`
-  background: #174c1b;
   color: #fff;
   height: 48px;
   display: flex;
   align-items: center;
   padding: 0 12px;
   justify-content: space-between;
-  border-bottom: 2px solid #205c2b;
+  border-bottom: 2px solid #00251D;
+  background: #013C2F;
 `;
 
 const Menu = styled.nav`
@@ -17,68 +17,41 @@ const Menu = styled.nav`
   gap: 6px;
   font-size: 0.95rem;
   font-weight: 500;
+  background: #205c2b;
+  border-radius: 16px;
+  padding: 6px 18px 6px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   
   .menu-item {
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 4px 12px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.2s;
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
     &:hover {
       background: #205c2b;
     }
   }
   .menu-icon {
-    font-size: 1rem;
-    margin-right: 2px;
+    font-size: 1.25rem;
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
   }
   .menu-arrow {
-    font-size: 0.8rem;
-    margin-left: 2px;
+    font-size: 1rem;
+    margin-left: 6px;
   }
 `;
 
-const Actions = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
-`;
 
-const Btn = styled.button`
-  background: #8fd14f;
-  color: #174c1b;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  padding: 6px 14px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background 0.2s;
-  &:hover {
-    background: #a6e36a;
-  }
-`;
 
-const BtnLogin = styled(Btn)`
-  background: #205c2b;
-  color: #fff;
-  border: 1px solid #8fd14f;
-  &:hover {
-    background: #174c1b;
-  }
-`;
 
-const LangCurrency = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  background: #205c2b;
-  border-radius: 4px;
-  padding: 4px 8px;
-  font-size: 0.9rem;
-`;
 
 const UserBlock = styled.div`
   background: #205c2b;
@@ -107,16 +80,5 @@ export const Header = () => (
       <span className="menu-item">MORE<span className="menu-arrow">▼</span></span>
       <UserBlock>21</UserBlock>
     </Menu>
-    <Actions>
-      <LangCurrency>
-        <span>🌐</span>
-        <span>EN</span>
-        <span>|</span>
-        <span>USD</span>
-        <span className="menu-arrow">▼</span>
-      </LangCurrency>
-      <Btn>REGISTRATION</Btn>
-      <BtnLogin>LOG IN</BtnLogin>
-    </Actions>
   </HeaderWrapper>
 );
