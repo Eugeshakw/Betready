@@ -15,7 +15,7 @@ export default defineConfig({
       include: "**/*.svg",
     }),
   ],
-  base: '/react-vite-template/',
+  base: '/main/', // Устанавливаем базовый путь для всех ресурсов
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
     alias: {

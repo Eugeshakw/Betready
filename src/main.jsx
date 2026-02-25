@@ -18,13 +18,13 @@ root.render(
   <StrictMode>
     {/* <Provider store = {store}> */}
       {/* <PersistGate loading={null} persistor={persistor}> */}
-      <BrowserRouter basename='/react-vite-template'>
+      <BrowserRouter basename='/main'>
           <ThemeProvider theme={theme}>
             <GlobalStyle/>
             <App />
           </ThemeProvider>
         </BrowserRouter>
       {/* </PersistGate> */}
-    {/* </Provider> */}
+    {/* </Provider> */} 
   </StrictMode>,
 )
