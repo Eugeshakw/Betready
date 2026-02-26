@@ -1,0 +1,34 @@
+// src/assets/svg/StarIcon.jsx
+import React from 'react';
+
+const StarIcon = (props) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect width="18" height="18" fill="url(#pattern0_80_78)" />
+    <defs>
+      <pattern
+        id="pattern0_80_78"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use xlinkHref="#image0_80_78" transform="scale(0.01)" />
+      </pattern>
+      <image
+        id="image0_80_78"
+        width="100"
+        height="100"
+        preserveAspectRatio="none"
+        xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAADYklEQVR4nO3cPWgUQRjG8dH4iR8QMKhN0BTRRlLEUiGFYBAsVKwUSwsFLUULNbERrBUigliJlrGUCJaCiBYWimLhR2AjioIGDfqXhXcwYHJekr3cO7PPDwIhRWZ2n33C5eVuQhARERERERERqQywAxi2rx3t3k+tAYeAn/xVfn+w3fuqJWAdMMG/yp+ta/f+agc4x+zOtnt/tQKsBYoGgXxUS/y0I1JLnLQjUksctSNSS5y0I1JLHLUjUkuctCNSSxy1I1JLnLQjUksctSNSS5y0I1JLHLUjUkuctCNSSxy1I1JLnLQjUksctSNSS5y0I1JLHLUjUkuctCNSSxy1I1JLnLQjUksctSNSS5y0I1JLHLUjUkuctCNSSxoBuoDdwAiL57qt2RXqCFgO9AB7gNN28+8D47TfZ+AxcBe4CBwG+oHVIXVAp13MMeCyXWR5sZOkZwp4bQ/OiD1I5QPVEzxx/rTn3SqgAzgAXAFGgZf25MjMpuwejdo9K+9dR1VhrAIezLKwNG8MWFlFICfnsKg0dqKKQG79ZxFp3s0qAhmaw4LS2IUqAtlUs1dOrfIB2LjgQCyU7fYLZX6Kyj9MpFAchaFQHIahUByGoVAchqFQHIahUByGoVAchhEpFPyEEdU4lMJdGDUOpXAbRg1DKdyHUaNQimTCqEEoRXJhZBxKkWwYGYZSJB9GRqEU2YQRAQOkayDkBhgkXXtDbuzdjak6FXIDXCNdV0NuEn/341jIDfCedL0LGZ4g+pu0rQ+5AHaSvv6QC+Ao6TsScgFcIn3DIRf2CaPU3Qm5AJ6RvqchB8BS4Dvp+15eS0gdsJV8bAmpS3yomN+QMfGhYn5DxsSHivkNGe3jwK02tljrhNS1eKj4CNg/ba1dwMMWrpf2kLGFQ8XndozFklnWLY/7eEJrpDtkbMFQ8Q1wvJljKsqwLLQXFe8h3SFjhUPFt/ZqbcU89rDMTiUqT/Sp95CxgqHiBHCmitN1yjCtXeO1HTIuYKj41c7ZqvzvNbDGQv5UuyHjPIaK3yyIzkV6wVEG86UWQ8Y5DhV/2AFom9uwzw32EExmPWS0J7CZg75uAN0O9ttte2nmYLa1IUUNXtn8Am4DvcEZoNf2Vu5xJq9CqoB99udountAX3AO6LO9Tldey2DI4J3v5+3crZ0hzX9uh+watrV7PyIiIiIiIiISFtEfsSipXa0r5OQAAAAASUVORK5CYII="
+      />
+    </defs>
+  </svg>
+);
+
+export default StarIcon;
