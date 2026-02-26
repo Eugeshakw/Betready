@@ -25,25 +25,25 @@ const Menu = styled.nav`
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   
   .menu-item {
-    display: flex;
-    align-items: center;
-    
-    background: transparent;
-    padding: 6px 4px;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    color: #FFF;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    
-  }
-  .menu-item:hover {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 6px 4px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: background 0.3s; 
+}
+.menu-item:hover {
   border-radius: 8px;
   background: #99B1AC;
+  
 }
 
   .menu-icon {
