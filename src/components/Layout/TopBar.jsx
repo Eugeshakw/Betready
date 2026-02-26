@@ -7,14 +7,18 @@ import Setting from '../../assets/images/Settings.png';
 import GreatBritain from '../../assets/images/GreatBritain.png';
 
 const TopBarWrapper = styled.div`
-  background: #00251d;;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  padding: 16px 12px 8px;
-  font-size: 0.92rem;
-  box-sizing: border-box; 
-  justify-content: space-between;
+    background: #00251d;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    /* padding: 16px 12px 8px; */
+    padding-top: 16px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 0;
+    font-size: 0.92rem;
+    box-sizing: border-box;
+    justify-content: space-between;
 `;
 
 const Logo = styled.div`

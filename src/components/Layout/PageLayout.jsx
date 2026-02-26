@@ -9,6 +9,9 @@ const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-left: 8px;
+  padding-right: 8px;
+  
 `;
 
 const ContentWrapper = styled.div`

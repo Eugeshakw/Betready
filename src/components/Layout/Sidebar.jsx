@@ -1,25 +1,40 @@
 import styled from 'styled-components';
 
 const SidebarWrapper = styled.aside`
-  background: #205c2b;
+  
   color: #fff;
   width: 240px;
   min-height: 100vh;
-  padding: 16px 0;
+  padding-right: 8px;
   box-sizing: border-box;
 `;
 
+const CollapseButton = styled.button`
+      background: #013C2F;
+      color: #99B1AC;
+      border: none;
+      border-radius: 8px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      font-family: Roboto;
+      width: 100%;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      cursor: pointer;
+      transition: background 0.2s;
+      &:hover {
+        background: #024b3b;
+        
+      }
+    `;
+
 export const Sidebar = () => (
   <SidebarWrapper>
-    <div style={{padding: '0 16px', fontWeight: 'bold', marginBottom: 16}}>Menu</div>
-    {/* Здесь будут пункты меню */}
-    <ul style={{listStyle: 'none', padding: 0, margin: 0}}>
-      <li>Favorites</li>
-      <li>Recommended</li>
-      <li>Top Games</li>
-      <li>All Sports</li>
-      <li>Casino</li>
-      <li>Promo</li>
-    </ul>
+    <CollapseButton type="button">{"<< Collapse block"}</CollapseButton>
+    
+    
+    
   </SidebarWrapper>
 );

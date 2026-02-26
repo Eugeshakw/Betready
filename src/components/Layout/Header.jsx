@@ -1,42 +1,51 @@
 import styled from 'styled-components';
-
+import Spades from '../../assets/images/Spades.png';
 const HeaderWrapper = styled.header`
-  color: #fff;
+  /* color: #fff; */
   height: 48px;
   display: flex;
+  width: auto;
   align-items: center;
-  padding: 0 12px;
+  /* padding: 10px 8px 10px 8px; */
   justify-content: space-between;
   border-bottom: 2px solid #00251D;
-  background: #013C2F;
+  
 `;
 
 const Menu = styled.nav`
   display: flex;
   align-items: center;
   gap: 6px;
+  width: 100%;
   font-size: 0.95rem;
   font-weight: 500;
-  background: #205c2b;
+  background: #013C2F;
   border-radius: 16px;
-  padding: 6px 18px 6px 18px;
+  padding: 4px 18px 4px 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   
   .menu-item {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 4px 12px;
-    border-radius: 6px;
+    
+    background: transparent;
+    padding: 6px 4px;
+    color: #fff;
+    border: none;
     cursor: pointer;
-    transition: background 0.2s;
-    font-size: 1.08rem;
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
     font-weight: 700;
-    letter-spacing: 0.5px;
-    &:hover {
-      background: #205c2b;
-    }
+    line-height: normal;
+    
   }
+  .menu-item:hover {
+  border-radius: 8px;
+  background: #99B1AC;
+}
+
   .menu-icon {
     font-size: 1.25rem;
     margin-right: 6px;
@@ -47,6 +56,14 @@ const Menu = styled.nav`
     font-size: 1rem;
     margin-left: 6px;
   }
+  .user-block-sp{
+     color: #fff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
 `;
 
 
@@ -54,31 +71,80 @@ const Menu = styled.nav`
 
 
 const UserBlock = styled.div`
-  background: #205c2b;
-  color: #fff;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 0.95rem;
+  gap: 12px;
+
+  margin-left: 42px;
 `;
 
 export const Header = () => (
   <HeaderWrapper>
     <Menu>
-      <span className="menu-item"><span className="menu-icon">🏆</span>TOP-EVENTS<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">SPORTS<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">LIVE<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">GAMES<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">CASINO<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">LIVE CASINO<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">ESPORTS<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">PROMO<span className="menu-arrow">▼</span></span>
-      <span className="menu-item">MORE<span className="menu-arrow">▼</span></span>
-      <UserBlock>21</UserBlock>
+      <button className="menu-item">TOP-EVENTS
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+      </button>
+      <button className="menu-item">SPORTS
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+    </button>
+      <button className="menu-item">LIVE
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">GAMES
+        <span style={{ marginLeft: 7, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">CASINO
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">LIVE CASINO
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">ESPORTS
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">PROMO
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <button className="menu-item">MORE
+        <span style={{ marginLeft: 6, display: 'flex', alignItems: 'center' }}>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+            <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+        </span>
+  </button>
+      <UserBlock><img src={Spades} alt="Spades" /><span className='user-block-sp'>21</span></UserBlock>
     </Menu>
   </HeaderWrapper>
 );
