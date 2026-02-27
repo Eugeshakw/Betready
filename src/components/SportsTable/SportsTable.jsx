@@ -4,23 +4,65 @@ import LeagueHeader from "./LeagueHeader";
 import USAIcon from "../../assets/svg/USAIcon.jsx";
 import BasketballIcon from "../../assets/svg/BasketballIcon.jsx";
 import SoccerBallIcon from "../../assets/svg/SoccerBallIcon.jsx";
+import MatchInfoRow from "./MatchInfoRow";
 
 const TableWrapper = styled.div`
   width: 100%;
   background: #e3e9e3;
-  border-radius: 8px;
-  margin-top: 16px;
   overflow: hidden;
 `;
 
 
 const MatchRow = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   border-bottom: 1px solid #c8d6c8;
   background: #fff;
   font-size: 14px;
   padding: 8px 16px;
+`;
+
+const MatchMain = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+`;
+
+const TeamInfo = styled.div`
+  display: flex;
+  align-items: center;
+  flex: 1;
+  position: relative;
+`;
+
+const TeamName = styled.span`
+  margin-left: 32px;
+  font-size: 16px;
+`;
+
+const Score = styled.span`
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: 8px;
+`;
+
+const IconLeft = styled.div`
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+`;
+
+
+
+const MatchFooter = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #1a3c2f;
+  gap: 8px;
 `;
 
 const TeamCell = styled.div`
@@ -61,19 +103,19 @@ const leagues = [
       {
         teams: ["Chicago Bulls", "Los Angeles Clippers"],
         scores: [25, 30],
-        odds: [2.12, 1.72, 1.95, 1.85],
+        odds: [2.12, "-", 1.72],
         footer: "+364"
       },
       {
         teams: ["Houston Rockets", "San Antonio Spurs"],
         scores: [8, 8],
-        odds: [1.536, 2.496, 2.67, 1.2],
+        odds: [2.12, "-", 1.72],
         footer: "+217"
       },
       {
         teams: ["Philadelphia 76ers", "Phoenix Suns"],
         scores: [25, 30],
-        odds: [2.12, 1.12, 1.84, 1.95],
+        odds: [2.12, "-", 1.72],
         footer: "+183"
       }
     ]
@@ -116,17 +158,9 @@ const SportsTable = () => (
         />
         
         {league.matches.map((match, mIdx) => (
-          <MatchRow key={mIdx}>
-            <TeamCell>{match.teams[0]}</TeamCell>
-            <ScoreCell>{match.scores[0]}</ScoreCell>
-            <ScoreCell>{match.scores[1]}</ScoreCell>
-            <TeamCell>{match.teams[1]}</TeamCell>
-            {match.odds.map((odd, oIdx) => (
-              <OddsCell key={oIdx}>{odd}</OddsCell>
-            ))}
-          </MatchRow>
+          <MatchInfoRow key={mIdx} match={match} />
         ))}
-        <TableFooter>{league.matches[league.matches.length - 1].footer}</TableFooter>
+        {/* <TableFooter>{league.matches[league.matches.length - 1].footer}</TableFooter> */}
       </div>
     ))}
   </TableWrapper>

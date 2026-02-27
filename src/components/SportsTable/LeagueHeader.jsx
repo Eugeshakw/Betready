@@ -1,6 +1,8 @@
 
 
+
 import React from "react";
+import ForwardIcon from "./ForwardIcon";
 import styled from "styled-components";
 
 const LeagueHeaderWrapper = styled.div`
@@ -11,11 +13,80 @@ const LeagueHeaderWrapper = styled.div`
   font-size: 16px;
   padding: 8px 16px;
 `;
-
+const LeagueEmptySpan = styled.span`
+    width: 100%;
+    height: 16px;
+    display: block;
+    color: #00251D;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+`;
 const LeagueExtraBlock = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  margin-left: auto;
+  gap: 37px;
+`;
+
+const LeagueExtraItem = styled.div`
+  display: flex;
+  align-items: center;
+  
+  gap: 45px;
+`;
+
+const LeagueExtraSpan = styled.span`
+  
+  
+  color: #00251D;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+ 
+`;
+
+const LeagueExtraText = styled.p`
+  margin: 0;
+  text-align: center;
+  
+  
+  font-weight: normal;
+  margin-bottom: 4px !important;
+
+  color: #00251D;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+`;
+
+const ForwardIconBlock = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding-left: 6px;
+  padding-right: 6px; 
+  background: #397617;
+  border: none;
+  cursor: pointer;
+`;
+
+const LeagueExtraContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
 `;
 const LeagueInfoBlock = styled.div`
   display: flex;
@@ -24,7 +95,7 @@ const LeagueInfoBlock = styled.div`
 const LeagueIcon = styled.span`
   display: flex;
   align-items: center;
-  margin-right: 8px;
+  
 `;
 
 const LeagueName = styled.span`
@@ -50,6 +121,58 @@ const LeagueHeader = ({ icon, countryIcon, name, columns }) => (
       <LeagueName>{name}</LeagueName>
     </LeagueInfoBlock>
     <LeagueExtraBlock>
+      <LeagueExtraItem>
+        <LeagueExtraSpan>1</LeagueExtraSpan>
+        <LeagueExtraContent>
+          <LeagueExtraText>
+            Team
+            Wins
+          </LeagueExtraText>
+          <ForwardIconBlock>
+            <ForwardIcon />
+          </ForwardIconBlock>
+        </LeagueExtraContent>
+        <LeagueExtraSpan>2</LeagueExtraSpan>
+      </LeagueExtraItem>
+      <LeagueExtraItem>
+        <LeagueExtraSpan>O</LeagueExtraSpan>
+        <LeagueExtraContent>
+          <LeagueExtraText>
+            Total
+          </LeagueExtraText>
+          <ForwardIconBlock>
+            <ForwardIcon />
+          </ForwardIconBlock>
+        </LeagueExtraContent>
+        <LeagueExtraSpan>U</LeagueExtraSpan>
+      </LeagueExtraItem>
+      <LeagueExtraItem>
+        <LeagueExtraSpan>1</LeagueExtraSpan>
+        <LeagueExtraContent>
+          <LeagueExtraText>
+            Handicap
+          </LeagueExtraText>
+          <ForwardIconBlock>
+            <ForwardIcon />
+          </ForwardIconBlock>
+        </LeagueExtraContent>
+        <LeagueExtraSpan>2</LeagueExtraSpan>
+      </LeagueExtraItem>
+      <LeagueExtraItem>
+        <LeagueExtraSpan>O</LeagueExtraSpan>
+        <LeagueExtraContent>
+          <LeagueExtraText>
+            IT1
+          </LeagueExtraText>
+          <ForwardIconBlock>
+            <ForwardIcon />
+          </ForwardIconBlock>
+        </LeagueExtraContent>
+        <LeagueExtraSpan>U</LeagueExtraSpan>
+      </LeagueExtraItem>
+  
+      
+        <LeagueEmptySpan>+5</LeagueEmptySpan>
       
     </LeagueExtraBlock>
     {columns && columns.map((col, idx) => (
