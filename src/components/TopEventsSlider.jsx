@@ -1,9 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TopEventsSliderWrapper = styled.div`
+const TopEventsContainer = styled.div`
   width: 100%;
   margin: 0 auto 24px auto;
+  background: #093c2b;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+`;
+
+const TopEventsSliderWrapper = styled.div`
   display: flex;
   gap: 8px;
   overflow-x: auto;
@@ -67,20 +75,24 @@ const topEvents = [
 ];
 
 export const TopEventsSlider = () => (
-  <TopEventsSliderWrapper>
+  <TopEventsContainer>
     <TopEventsLabel>TOP-EVENTS</TopEventsLabel>
-    {topEvents.map((event, idx) => (
-      event.active ? (
-        <TopEventActive key={idx}>
-          <TopEventImage>{event.img}</TopEventImage>
-          {event.label}
-        </TopEventActive>
-      ) : (
-        <TopEventCard key={idx}>
-          <TopEventImage>{event.img}</TopEventImage>
-          {event.label}
-        </TopEventCard>
-      )
-    ))}
-  </TopEventsSliderWrapper>
+    <TopEventsSliderWrapper>
+      {topEvents.map((event, idx) => (
+        event.active ? (
+          <TopEventActive key={idx}>
+            {event.label}
+            <TopEventImage>{event.img}</TopEventImage>
+            
+          </TopEventActive>
+        ) : (
+          <TopEventCard key={idx}>
+            {event.label}
+            <TopEventImage>{event.img}</TopEventImage>
+            
+          </TopEventCard>
+        )
+      ))}
+    </TopEventsSliderWrapper>
+  </TopEventsContainer>
 );
