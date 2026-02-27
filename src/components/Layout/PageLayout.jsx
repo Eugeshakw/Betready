@@ -4,6 +4,7 @@ import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import { MainContent } from './MainContent';
 import { Footer } from './Footer';
+import RightSidebar from './RightSidebar';
 
 const LayoutWrapper = styled.div`
   display: flex;
@@ -26,6 +27,7 @@ export const PageLayout = () => (
     <ContentWrapper>
       <Sidebar />
       <MainContent />
+      <RightSidebar />
     </ContentWrapper>
     <Footer />
   </LayoutWrapper>

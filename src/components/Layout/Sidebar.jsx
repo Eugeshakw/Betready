@@ -31,17 +31,43 @@ import YouTubeIcon from '../../assets/svg/YouTubeIcon';
 import SoccerBallIcon from '../../assets/svg/SoccerBallIcon';
 import TennisBallIcon from '../../assets/svg/TennisBallIcon';
 import BasketballIcon from '../../assets/svg/BasketballIcon';
+import BaseballBallIcon from '../../assets/svg/BaseballBallIcon';
 import VolleyballIcon from '../../assets/svg/VolleyballIcon';
 import PingPongIcon from '../../assets/svg/PingPongIcon';
 import CricketIcon from '../../assets/svg/CricketIcon';
 import PSControllerIcon from '../../assets/svg/PSControllerIcon';
 import ForwardBlackIcon from '../../assets/svg/ForwardBlackIcon';
+import BeachVolleyballIcon from '../../assets/svg/BeachVolleyballIcon';
+import FifaIcon from '../../assets/svg/FifaIcon';
+import YachtIcon from '../../assets/svg/YachtIcon';
+import GolfHoleIcon from '../../assets/svg/GolfHoleIcon';
+import RunningAwayIcon from '../../assets/svg/RunningAwayIcon';
+import HandballIcon from '../../assets/svg/HandballIcon';
+import TrottingHorseIcon from '../../assets/svg/TrottingHorseIcon';
+import LotteryIcon from '../../assets/svg/LotteryIcon';
+import MortalKombatIcon from '../../assets/svg/MortalKombatIcon';
+import BaccaratIcon from '../../assets/svg/BaccaratIcon';
+import BattleshipIcon from '../../assets/svg/BattleshipIcon';
+import CardsIcon from '../../assets/svg/CardsIcon';
+import CardsCrickedIcon from '../../assets/svg/CardsCrickedIcon';
+import CardFootballIcon from '../../assets/svg/CardFootballIcon';
+import DiamondIcon from '../../assets/svg/DiamondIcon';
+import GoalIcon from '../../assets/svg/GoalIcon';
+import DiceIcon from '../../assets/svg/DiceIcon';
+import JokerIcon from '../../assets/svg/JokerIcon';
+import ChipIcon from '../../assets/svg/ChipIcon';
+import GoldRushIcon from '../../assets/svg/GoldRushIcon';
+import KillerJokerIcon from '../../assets/svg/KillerJokerIcon';
+import RouletteIcon from '../../assets/svg/RouletteIcon';
+import LottoIcon from '../../assets/svg/LottoIcon';
+import ClubsIcon from '../../assets/svg/ClubsIcon';
+import TwentyOne from '../../assets/svg/TwentyOne';
 
 
 const SidebarWrapper = styled.aside`
   
   color: #fff;
-  width: 258px;
+  width: 268px;
   min-height: 100vh;
   padding-right: 8px;
   box-sizing: border-box;
@@ -435,12 +461,26 @@ export const Sidebar = () => (
         }}>Top</CategoriesTitle>
         <CategoriesList style={{background: '#fff', borderRadius: 0, margin: 0, padding: 0}}>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><SoccerBallIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Football</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(25)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Football</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(25)</CategoryCount>
             </span>
               <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
                   <CategoryVerticalDivider />
@@ -448,12 +488,26 @@ export const Sidebar = () => (
               </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><TennisBallIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Tennis</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(15)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Tennis</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(15)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -461,12 +515,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><BasketballIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Basketball</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(60)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Basketball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(60)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -474,12 +542,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><PuckIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Ice Hockey</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(13)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Ice Hockey</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(13)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -487,12 +569,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><VolleyballIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Volleyball</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(14)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Volleyball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(14)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -500,12 +596,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><PingPongIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Table Tennis</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(19)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Table Tennis</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(19)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -513,12 +623,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><CricketIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Cricket</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(9)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Cricket</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(9)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -526,12 +650,26 @@ export const Sidebar = () => (
             </span>
           </CategoryItem>
           <CategoryItem style={{
-            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
           }}>
             <CategoryIcon style={{marginRight: 16}}><PSControllerIcon /></CategoryIcon>
             <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
-              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Esports</CategoryName>
-              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(7)</CategoryCount>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Esports</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(7)</CategoryCount>
             </span>
             <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
               <CategoryVerticalDivider />
@@ -541,31 +679,787 @@ export const Sidebar = () => (
         </CategoriesList>
       </CategoriesSection>
       <CategoriesSection>
-        <CategoriesTitle>Categories from A to Z</CategoriesTitle>
+        <CategoriesTitle 
+        style={{
+          background: '#b7c9b7',
+          
+          padding: '4px 8px',
+          borderRadius: '0',
+          margin: 0,
+        }}>
+          Categories from A to Z
+          </CategoriesTitle>
         <CategoriesList>
-          <CategoryItem>
-            <CategoryIcon>⚾️</CategoryIcon>
-            <CategoryName>Baseball</CategoryName>
-            <CategoryCount>2</CategoryCount>
-            <CategoryArrow>▼</CategoryArrow>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><BaseballBallIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Baseball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(2)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
           </CategoryItem>
-          <CategoryItem>
-            <CategoryIcon>🏇</CategoryIcon>
-            <CategoryName>Horse Racing</CategoryName>
-            <CategoryCount>6</CategoryCount>
-            <CategoryArrow>▼</CategoryArrow>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><BeachVolleyballIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Beach Volleyball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(2)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
           </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><YachtIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Boat Racing</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(6)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><FifaIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>FIFA</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(64)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><GolfHoleIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Golf</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(1)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><RunningAwayIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Greyhound Racing</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(5)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><HandballIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Handball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(2)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><TrottingHorseIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Horse Racing</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(6)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><LotteryIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Lottery</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(8)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><MortalKombatIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Mortal Kombat</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(23)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>    
         </CategoriesList>
       </CategoriesSection>
       <CategoriesSection>
-        <CategoriesTitle>1xPlay</CategoriesTitle>
+        <CategoriesTitle
+        style={{
+          background: '#b7c9b7',
+          
+          padding: '4px 8px',
+          borderRadius: '0',
+          margin: 0,
+        }}
+        >1xPlay
+        </CategoriesTitle>
         <CategoriesList>
-          <CategoryItem>
-            <CategoryIcon>🎲</CategoryIcon>
-            <CategoryName>Baccarat</CategoryName>
-            <CategoryCount>6</CategoryCount>
-            <CategoryArrow>▼</CategoryArrow>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><BaccaratIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Baccarat</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(5)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><BattleshipIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Battleships</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><CardsIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Card Basketball</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(4)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><CardsCrickedIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Card Cricket</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(4)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><CardFootballIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Card Football</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><DiamondIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Crystal</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><GoalIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Darts Live</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><DiceIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Dice</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><GoalIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Darts Live</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><JokerIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Durak</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><ChipIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Esports Poker</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(8)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><GoldRushIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Gold Rush</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><KillerJokerIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Killer Joker</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(2)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><RouletteIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Roulette</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(6)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><LottoIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Russian Lotto</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(2)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><ClubsIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>Seka</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(4)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>  
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><TwentyOne /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>TwentyOne</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(10)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
           </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 8px', borderBottom: '1px solid #dbe6db', background: '#fff', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><EarthGlobeIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>21 Classics</CategoryName>
+              <CategoryCount style={{
+                color: '#00251D',
+                fontFamily: 'Roboto',
+                fontSize: 16,
+                fontStyle: 'normal',
+                fontWeight: 400,
+                lineHeight: 'normal'
+              }}>(3)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>    
         </CategoriesList>
       </CategoriesSection>
     </CategoriesBlock>

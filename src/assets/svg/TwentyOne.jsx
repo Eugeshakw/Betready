@@ -1,0 +1,15 @@
+import React from "react";
+
+const TwentyOne = (props) => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="18" height="18" fill="url(#pattern0_80_800)" />
+    <defs>
+      <pattern id="pattern0_80_800" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlinkHref="#image0_80_800" transform="scale(0.01)" />
+      </pattern>
+      <image id="image0_80_800" width="100" height="100" preserveAspectRatio="none" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE0klEQVR4nO2dSYgdVRSGjx2niANE26T7nVPVeXVuveShQtJOiBoXDhCMRDSKuBA3ESccwAkRB8TgJuDChQMYZw2CceNGguCuDeIqGyXRrMQpOA+x6ZK6L6DdXdXvVdV9XVWv/h/+Xfc959yv77u33r11mwiCIAiCIAiCIAiCIAiCIAiCIAjqL10zTh05l1S2kHrbmmXZ0qt9zXi5ENrt08jII6S8j4zMkZGo4Z6zfaHeQ6R66nKiOIYM30UqP1SgE6JKWuV7Ur5j+ChUTyDlV0sv2NTEKm8T88ph4Rgjwx+UXqSpm3mP7TvnUn6m/OKkrn7KLYzOZIdU/qlAYVEtbfvOX+8OiOHdpRdlam7ld9zAiJdwyn+XXpCpu/kv6px+SnEggdxQfjEyGlbv+uJA4gmp7ELMyPiJ4kBUXqpAIdFIWOVFByMEEzo5M+8GEFMlA0hULQNIVC0DSFQtA0hULQNIVC3XGYjyQVLeZR9MVe6zD1XxOt7Ilw476DAZfs22r/wcqfwCIPM9R0beJPU3LJlTh88mw+/m2zrmw6T8CpnWZup2j5/XbsBqd/sAxCb7DalcmSk35U1k+NsB2p8lI68nQlhc7wMAEsNYNxnmym9qyrcfb2ltq/xGIZ83eL3e5U0HMkumdUGhHNt81hKf/9l264LWZc0GEk+mLqRyT3L73tWZ2mk0kHhrM5iUJaKP2UNohq8lbV1IRCtSfzKeG5S/SuiEuzPV23AgH6bGVX8DGfliwWg6QIF3Ufrv8NMJcQ5Rl1ct+tm0yb3hQB5OjDkxcZLt/OSifibjtVNyPT85Dn9tP9LiY5/2tKXMkPLjALLQgVyTGDOUG/v87vOp+/9Fd+8aDUT51uSO5V19Rtanqfmq/Aog+RP8zB5PnRfPaw/wFcbHKdmOkfIRACk2Sj4hlSuo3TKkfHPySmmBQ7k/Mde1a1dniA0gbgDKDPn+iYm5hrwVQJbPh8jIs9QdPzk1135zD4DkHQV84OgzxSXUkUmanj6ub57xA6aRPwDEKQj50a68NtGx2fOUNzLGA5A+MD6njj+VL0e5LUdMAEmHwQepvfrMfPnJLRmWugAygGcpbJ2TOa8ur7JP7PnjAkiKX86UT+Bt7E348X54obgAkmiVIDW2SkCGd5LyXjK8nwz/5DA2gCQkuD81bigXZ1zGAoiDBHcuEffSDLcp3Guf4AGkoEO+k9xpBRl5D0CKOP7rdqmOPwUghdzaTO6v/fhzwM7ZkdhCwFc1GIg8Si4V+usGH538UWIbyo81GEi8jHX0Qj3zStvJ2eLfNL9Wf73jpXXdgFj/bg9RxxO88bbnM+/IeQh7jlTet4ctege5h7nMrg2QBpkBhCplAImqZQCJqmUAiaplAImqZQCJRg9Ib31egWKk/lZ+wcEIkSdLL8SMiNNO3GcbId620gsxI2JtXVccSHxScOBvUGEa+hV/sXrvhFegKKn3pcrOFL+ynO/sE2zs3HHEnu53quT392CzXHctJl81vqcCxUW1cvz1/lCuGv/vMv4sR/6bbZW3hnkZ///AyO1k5LvSCzZVdXz/ird9+CAW33j9oH0BE//QJTq6+zhjL69xtrzNq3DiDAq86cb+y6PA22j7AIIgCIIgCIIgCIIgCIIgCIIgCKJ++hf07Oq7aKR2kgAAAABJRU5ErkJggg==" />
+    </defs>
+  </svg>
+);
+
+export default TwentyOne;

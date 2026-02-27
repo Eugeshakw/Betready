@@ -1,0 +1,15 @@
+import React from "react";
+
+const AppsIcon = (props) => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="20" height="20" fill="url(#pattern0_80_696)" />
+    <defs>
+      <pattern id="pattern0_80_696" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlinkHref="#image0_80_696" transform="scale(0.01)" />
+      </pattern>
+      <image id="image0_80_696" width="100" height="100" preserveAspectRatio="none" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACO0lEQVR4nO3cPW4UQRCG4TmCxRnASCByHPN7AUfk5PgEhE64iI+CgIgjACLbqfpaEGKNjGQnLc/uurur1u8rdbbSVu+j1qw6mGkiIiIiIiIiIiJa1zzPDzebzdHKj1PLzOyRu/9w92/zPD9o+mW0DkPSv2WBEghDoMTDUBYUSU8lnfZcZnbSYi9mduzuP2sYN1A+h33QS/p42wYarIveJyPNSTkEENsSIzRKdhDbESMsSmYQ2xMjJEpWELt6gO+NEQ4lI4it/De1A8rX4SjZQKwRRhiUTCDWGCMEShYQ64QxHCUDiHXGGIoSHcQGYQxDiQxigzGGoEQFsSAY3VEiglgwjK4oEUEkvXD3PwFBfi3XNfcOZEnSq0go7v7b3Z9MrYsKEgmlG0Z0kAgoXTEygIxE6Y6RBWQEyhCMTCBLpZTXPVCGYWQD6YEyFCMjSEuU4RhZQW6g/D0ojMwgd4kSBiM7yF2ghMI4BJB9UMJhHArILighMZbc/b27f+m5JJ232Esp5e0alOVq38wet5iBtjwpYU/GfURxMOKggBGgUsqbBQWMYCfFzI5Hz0FERERERNf9f7vCRed1tu2c7v6p95xm9nzqXZbrd3f/PmDO06l3gAgQAVIPEAEiQOoBIkAESD1ABIgAqQeIABEg9QARIAKkHiACRIDUA0SACJB6gAgQAVIPEAEiQOoBIkAESD1ABIgAqQeIABEg9QBROJCXy5sVOq93O8z5YcCcz9r86kRERERERERERFO4LgGDMEn9pPghLgAAAABJRU5ErkJggg==" />
+    </defs>
+  </svg>
+);
+
+export default AppsIcon;

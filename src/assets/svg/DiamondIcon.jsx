@@ -1,0 +1,33 @@
+import React from "react";
+
+const DiamondIcon = (props) => (
+  <svg
+    width={18}
+    height={18}
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <rect width={18} height={18} fill="url(#pattern0_80_101)" />
+    <defs>
+      <pattern
+        id="pattern0_80_101"
+        patternContentUnits="objectBoundingBox"
+        width={1}
+        height={1}
+      >
+        <use xlinkHref="#image0_80_101" transform="scale(0.01)" />
+      </pattern>
+      <image
+        id="image0_80_101"
+        width={100}
+        height={100}
+        preserveAspectRatio="none"
+        xlinkHref="data:image/png;base64,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"
+      />
+    </defs>
+  </svg>
+);
+
+export default DiamondIcon;

@@ -16,7 +16,7 @@ export const CategoryItem = styled.li`
   display: flex;
   align-items: center;
   padding: 12px 0;
-  border-bottom: 1px solid #b7c9b7;
+  border-bottom: 1px solid #B0C8A2;
   font-size: 16px;
   font-family: Roboto, Arial, sans-serif;
   color: #00251D;
@@ -29,6 +29,8 @@ export const CategoryItem = styled.li`
 export const CategoryIcon = styled.span`
   font-size: 18px;
   margin-right: 8px;
+      width: 18px;
+    height: 18px;
 `;
 export const CategoryCount = styled.span`
   color: #388e1f;
@@ -100,7 +102,7 @@ export const CategoriesTitle = styled.div`
 export const CategoriesList = styled.ul`
   list-style: none;
   margin: 0;
-  padding: 0 12px;
+  
 `;
 
 export const CategoriesTab = styled.div`
