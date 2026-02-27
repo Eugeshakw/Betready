@@ -1,0 +1,13 @@
+import React from 'react';
+
+export const ForwardRightIcon = (props) => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="20" height="20" fill="url(#pattern0_80_228)" fillOpacity="0.6"/>
+    <defs>
+      <pattern id="pattern0_80_228" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlinkHref="#image0_80_228" transform="scale(0.01)"/>
+      </pattern>
+      <image id="image0_80_228" width="100" height="100" preserveAspectRatio="none" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAklEQVR4nO3csW0bQQAFUVbhDpzLzTmg21Uo1TBKeJEDWwKI+yLfCzf6wGDD3csFAAAAAAAAAACAp1P9OHsDN9VL9Vb9Oc44P8ZBlKEYB1GGYhxEGYpxEOXeql/Ve//v99mbH1r1s3r9RBA35d4SZU+i7EmUPYmyJ1H2JMqeRNmTKHsSZU+i7EmUPYmyJ1H2JMqeRNmTKHsSZU+iPESQ69m7H1Ji7EiMHYmxIzF2JMaOxNiRGDsSY0di7EiMHYmxIzF2JMaOxNiRGDsSY0di7EiMLXkW/a0/DrievfVp9O8oYgxFuZ697Wn1dxQxhqJcz97CjS/+AAAAAAAAAAAAuHzRBxWRhAJJsbhJAAAAAElFTkSuQmCC"/>
+    </defs>
+  </svg>
+);

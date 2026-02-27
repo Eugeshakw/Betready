@@ -8,14 +8,20 @@ const TopEventsContainer = styled.div`
   border-radius: 12px;
   display: flex;
   align-items: center;
-  padding: 0 8px;
+  
+  overflow: hidden;
+  box-sizing: border-box;
 `;
+  
+
 
 const TopEventsSliderWrapper = styled.div`
   display: flex;
   gap: 8px;
-  overflow-x: auto;
   align-items: center;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
 `;
 
 const TopEventsLabel = styled.div`
@@ -23,7 +29,7 @@ const TopEventsLabel = styled.div`
   color: #fff;
   font-weight: 700;
   font-size: 16px;
-  padding: 12px 18px;
+  
   border-radius: 8px 0 0 8px;
   min-width: 120px;
   display: flex;
@@ -31,35 +37,59 @@ const TopEventsLabel = styled.div`
 `;
 
 const TopEventCard = styled.div`
-  background: #3a7c2b;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 8px;
-  min-width: 120px;
   display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  align-items: stretch;
+  width: 120px;
+  height: 50px;
+  border-radius: 12px;
+  overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  flex-shrink: 0;
 `;
 
-const TopEventImage = styled.div`
-  width: 32px;
-  height: 32px;
-  background: #fff;
-  border-radius: 4px;
+const CardLeft = styled.div`
+  background: #3a7c2b;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #3a7c2b;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 40%;
+  height: 100%;
 `;
+
+const CardRight = styled.div`
+  background: #fff;
+  color: #3a7c2b;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 24px;
+  width: 60%;
+  height: 100%;
+`;
+
+const PlaceholderImg = styled.div`
+  width: 48px;
+  height: 48px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #bbb;
+`;
+
+// ...удалено, теперь используется PlaceholderImg
 
 const TopEventActive = styled(TopEventCard)`
   border: 2px solid #00bfff;
-  background: #093c2b;
 `;
 
 const topEvents = [
@@ -69,30 +99,34 @@ const topEvents = [
   { label: 'LaLiga', img: 'A' },
   { label: 'EURO LEAGUE', img: 'U' },
   { label: 'EuroLeague', img: 'E' },
-  { label: 'NBA', img: 'N' },
-  { label: 'NBA', img: 'B' },
-  { label: 'NHL', img: 'H', active: true },
+  
 ];
+
+const LeagueName = styled.span`
+  color: #FFF;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
 
 export const TopEventsSlider = () => (
   <TopEventsContainer>
     <TopEventsLabel>TOP-EVENTS</TopEventsLabel>
     <TopEventsSliderWrapper>
-      {topEvents.map((event, idx) => (
-        event.active ? (
-          <TopEventActive key={idx}>
-            {event.label}
-            <TopEventImage>{event.img}</TopEventImage>
-            
-          </TopEventActive>
-        ) : (
-          <TopEventCard key={idx}>
-            {event.label}
-            <TopEventImage>{event.img}</TopEventImage>
-            
-          </TopEventCard>
-        )
-      ))}
+      {topEvents.map((event, idx) => {
+        const CardComponent = event.active ? TopEventActive : TopEventCard;
+        return (
+          <CardComponent key={idx}>
+            <CardLeft>{event.label}</CardLeft>
+            <CardRight>
+              <PlaceholderImg>l</PlaceholderImg>
+              <LeagueName>{event.label === 'EPL' ? 'Premier League' : event.label}</LeagueName>
+            </CardRight>
+          </CardComponent>
+        );
+      })}
     </TopEventsSliderWrapper>
   </TopEventsContainer>
 );

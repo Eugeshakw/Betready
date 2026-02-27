@@ -67,7 +67,7 @@ import TwentyOne from '../../assets/svg/TwentyOne';
 const SidebarWrapper = styled.aside`
   
   color: #fff;
-  width: 268px;
+  min-width: 26px;
   min-height: 100vh;
   padding-right: 8px;
   box-sizing: border-box;

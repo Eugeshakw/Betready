@@ -1,0 +1,13 @@
+import React from 'react';
+
+export const SearchIcon = (props) => (
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <rect width="20" height="20" fill="url(#pattern0_80_500)"/>
+    <defs>
+      <pattern id="pattern0_80_500" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlinkHref="#image0_80_500" transform="scale(0.01)"/>
+      </pattern>
+      <image id="image0_80_500" width="100" height="100" preserveAspectRatio="none" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFXUlEQVR4nO2dT4hXVRTHT5NZTkmUIBkolSRZkTQRQf8Qi4IKXIS6EYSkNlEZqUmrMKGI/hC0kCjU0MTATX+IaFEoyEhTWmktRMuGSJtsNGqwtPnE5XcmhmHSe99783vnvt/5bGYWszj3fd+799zzb0Qcx3Ecx3Ecx3E6GGAacCvwELAOeBV4A3gX2AC8DrwAPA7cC1wBdNVtd2MApgNLgbeA7ynGCeA94Eng+rrXlB3A+cAi4H3gFNXzNfAUMKPutZoGuAh4AviJ9vA38DZwTd1rNwVwHrASOEY9nFZhLpdOB7gD+AYb/AE8DUySDv0qXgaGsccuYJZ0CuqK9mKbX4EHpOkANwFHyYNhYJU0FWC+3gly4zXgHGkSwALgZMUP6i/gINAHfKY/vwUGqZ5XpGHb1O8VPJTDwHpgCTAbOPcsN/y7gef0vKrCeVgjDTnAy5wZ4aa+Rbe7rhJ2BAHXAgMlbAmiLpXMXdveEovfBFxVsU0XhoMaOF7Qrj+B6yRH9J5RhO+A2yfYthnAtoL27QO6JSeAOwvu2xvDW9xGO5cDQ40+5EPoAfgqcYFBvGdrsvdm4JcCZ9s8yQENFKaK8UjNNs8FjiTavdP8/UQPzVRPZrUYALihwB3mPrGMejApbBRDAAsTz75dYjzT93OiN9W2AzwWzdOnsEAsomnXWMJbOF8MAkwBDiWs5R2xiObAY9kkhqG1dcUS3OaLxRIaO4otSAh/N1uMA3yeIMpysYSW6sSyRTIAeDBhTdvFElo3FYvJs+N/Lrixd5NjpgryEorYDpsy/CxociqWHrEAcGmC0eslI2iVo8bysFgAuC3B6CWSEUB3QqbzJbGAFj7HUml+ox0AeyPX9oFYQDNxMZw8U9rVKsTnTfZJZqGGA5IhtNobYugXCwBvRhr8hWQI8Ezk+gbFAsDWSIN3SobQav6J4bRYQNOuMeyWDAFWR65vSCygbWQx7JcMoVXbFcOAWAB4Pqs9duLOyIOS2R4bmC6ZAeyIXNunkmF44S7JCKArobNrgxgqF41lrWQE0JOwtpVi6C2KLc3slWZ6WLbSCtoHHptLN58tHAHYk5AFnSpW0Kb8Rm1bwLyENe0QS4QJCQnGD1gs/xkLsDnr3hGdkBCL6d49YI72r8duw3Mk85reE5Yb9YEPs92uxvRchHEVsWwTgwCLSWOZWCWx+sRcPRMwK3HERz8wWawCXJ2w9460iN0iBgCmAl8mvlArxDo6yCV1asLcmm2eDHySaHcofbpArANcVqCp8khddU20xkJ9RDqLJRd07lUqoZd9YZvtvLLANhX42Hz31DhlmGGqTirDWjQxpU3e1GABG8PXP1Nyo4DHMppDE/W10Lr0FdmiRtgPXCI5EkYcAf+UWHyfVqFPqig2tTnRCzyTXdmKsqKCB3BUC5/viY2DaVrgRg2hx0ZtO0aU2Lx77BSgPVpR+GII7AGP6Xi+dZoDD2nX35h48hQleCRh+gHNpC9LUUa5wxbnLJYluM7TJEe0/S2ETJpGX85fyrXqPlrkeAnbshalW8+ViRgnXpRwA58ZHqo+3M4SZdSMkTDIpU5+0NGB/4VDOl2U4IXdXzDcUoZ+LdAYN2rb0aKMmWC6teBgsRiG9YtcFpNcclGUMK5C+xe3VzCo/5ReFtcUKUhwUcYPg/SEQWeh21WLEMKM3h9H3ciH9PcDofBZ/+POKp1oWrqIzUWx+9Xu7rjLo2VwUeyBi2IPXBR7uCgGcVEM4qIYxEUxiItikBI3+hBjW1S3/Y2E9C8liPFo3XY3GuJFcTEMieJiGBLFxTAkiothSBQXw5hL7K6t4ziO4ziO4ziSE/8CE3qvNG8D/Z8AAAAASUVORK5CYII="/>
+    </defs>
+  </svg>
+);

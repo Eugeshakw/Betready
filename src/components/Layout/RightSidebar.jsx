@@ -3,7 +3,7 @@ import styled from "styled-components";
 import AppsIcon from "../../assets/svg/AppsIcon";
 const SidebarContainer = styled.div`
   width: 56px;
-  
+  padding-left: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;

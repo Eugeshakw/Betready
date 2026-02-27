@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import Baner from '../../assets/images/Baner.png';
 import { GameSlider } from '../GameSlider';
 import { TopEventsSlider } from '../TopEventsSlider';
+import { EventsNavBar } from '../TopEvents/LeagueNavBar/EventsNavBar';
+import { CategoryNavBar } from '../TopEvents/CategoryNavBar/CategoryNavBar';
+import SportsTable from '../SportsTable/SportsTable';
 const MainWrapper = styled.main`
 	flex: 1;
 	
@@ -10,7 +13,7 @@ const MainWrapper = styled.main`
 `
 
 const SliderBanner = () => (
-  // ...existing code...
+  
   <div
     style={{
       width: '100%',
@@ -73,6 +76,9 @@ export const MainContent = () => (
     <SliderBanner />
     <GameSlider />
     <TopEventsSlider />
+    <EventsNavBar />
+    <CategoryNavBar />
+    <SportsTable />
     {/* ...остальной контент ... */}
   </MainWrapper>
 )
