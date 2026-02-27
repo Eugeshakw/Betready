@@ -1,0 +1,15 @@
+import React from 'react';
+
+const CricketIcon = (props) => (
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" {...props}>
+    <rect width="18" height="18" transform="matrix(-4.37114e-08 -1 -1 4.37114e-08 18 18)" fill="url(#pattern0_80_87)" />
+    <defs>
+      <pattern id="pattern0_80_87" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlinkHref="#image0_80_87" transform="scale(0.01)" />
+      </pattern>
+      <image id="image0_80_87" width="100" height="100" preserveAspectRatio="none" xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEUUlEQVR4nO2dSYgcZRTH/1EUUQQXcJzu96oy0+91x0FEHUE9uVw8CYIrmIOag8vF5aKikmguimfRHOLFm6AHD3FBvAqiIHpwidtBAm4wRg1xma+lqp2kncl0uqe/r/tV9fvBO8xl5r369f/7aqqaKsBxHMdxHMdxHKeKaONSCD8I4eeh/AqUXoTQbrT5duT5OagSSk1IdmvZv9KzUH6i/LlFAtPMz58J5cch9C2Uu5uW0F8QPgBpXgXrHyrlN6G8OmCWzyC8Fx1uwBRtugnC3w8UsbEClF5Flp0La0hzJ5SPDD2L0J9Q3o8d2fy0W98GpSd7B3ckGf31JTS/CFYQ2jUwFQPF8GG0+REAp0yneeU9Y4joH+QnaLaIaSN0z5Zl/L/em3xaio1tvGSsl/IxLpk7a7JDRErGiZexQ2hll2MidM4/G0o/RGv+eO1BtZPRXfch+w0tumECA/DeBDJ6A+T5hekHSJiMDUVH0c6uR0JO7a35iQYQfgxVT4ZumOlwuuVL6JrEA7yfpvFJJ2O9FDqEhYU5REf5mcTNr5Z7VJ1k6FrR2/FPiZVfTt54O9+B2sng/5LCD0UeiA8kb7rVvC5u00Zk9FKyEnfpEn49vZDG1fEanvAGPlRKaB+iofxC8oYX57PaytAyJUfjnd4LP5z208O/Y3n5tPrK4LWU7I4zYHEfIK2Q12ovQ8v6NNqcEP4knZDmzhmQ0S1r+/Y8yqzlnb806fgiynIlFZBRVHEfKRLbIPxBgnTcPDMytJg3exTRaGcLUP4xYoP7x+5J6O7KyOjV04hKq3ktlP8YvzF6Z+ylSiqUjGMJoaeQ5hsm9N0YTe3D0tLpM5aMblktvg1JWJy7AEIvQfjvERo6CMluGftvSwWT0asQ7yxrMzqNDpSfg/DnmzRxBEpvQPmumTqb0hNUcU1wohSXBjp8BYRvLC8WFldw8/yMaL9fKiyj2HcX6WLUBqm0jFUI3YnaIBXdwHsVIHwfaoO4DDuIy7CDuAw7iMuwg1Rexv2oDS7DEC7DEC7DEC7DEC7DEC7DEC7DEC7DEC7DEC7DEMXtW5dhBJdhCJdhCJdhCJdhCJdhDKU7oPyPgYPbdRnVlRIg9ABqTXWkhPrLqI6UMDsy7G/yYfZk2JUSZleGPSnBZdiRElyGHSnBZdiRElyGHSnBZdiRElyGHSnBZRQUT+IUehdLdN4UpQSXUSD5ZRD+pXdQ6KMpSQkuY4OMtZq4lOAyNpUxcSnBZZxUxsSkBJcxtIw+KaO8yEWG/mKdy+iT8fNoywp9GFlKcBnHXwA2oozoUoLLGFtGNCnBZRz7p2/YPeOk9dYWHz4ToHxvshlnUwb9uqVHi0spxWXEWab6ZFh/n2EFZMRKxorLGJfiIflC37gMe1K+dhm1kOIyDEmhFWjzyoQdOaUUpa9chiVaDR4sxWUYkuIyDElxGUak8EGXYU1KK1uedhuO4ziO4ziO46Aq/AsECgXwWX96SQAAAABJRU5ErkJggg==" />
+    </defs>
+  </svg>
+);
+
+export default CricketIcon;

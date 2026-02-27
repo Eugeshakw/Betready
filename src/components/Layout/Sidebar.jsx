@@ -1,13 +1,47 @@
+import {
+  CategoriesBlock,
+  CategoriesHeader,
+  CategoriesTabs,
+  CategoriesTab,
+  CategoriesRow,
+  CategoriesRowIcon,
+  CategoriesRowCount,
+  CategoriesSection,
+  CategoriesTitle,
+  CategoriesList,
+  CategoryItem,
+  CategoryIcon,
+  CategoryName,
+  CategoryCount,
+  CategoryArrow,
+  CategoryVerticalDivider
+} from './CategoriesBlock.styled';
 import styled from 'styled-components';
 import StarIcon from '../../assets/svg/StarIcon';
+import PuckIcon from '../../assets/svg/PuckIcon';
+import StarGreen from '../../assets/svg/StarGreen';
+import Profile from '../../assets/svg/Profile';
 import DownCheckIcon from '../../assets/svg/DownCheckIcon';
+import ForwardGreen from '../../assets/svg/ForwardGreen';
 import FacebookLikeIcon from '../../assets/svg/FacebookLikeIcon';
 import TrophyIcon from '../../assets/svg/TrophyIcon';
 import WarrantyIcon from '../../assets/svg/WarrantyIcon';
+import EarthGlobeIcon from '../../assets/svg/EarthGlobeIcon';
+import YouTubeIcon from '../../assets/svg/YouTubeIcon';
+import SoccerBallIcon from '../../assets/svg/SoccerBallIcon';
+import TennisBallIcon from '../../assets/svg/TennisBallIcon';
+import BasketballIcon from '../../assets/svg/BasketballIcon';
+import VolleyballIcon from '../../assets/svg/VolleyballIcon';
+import PingPongIcon from '../../assets/svg/PingPongIcon';
+import CricketIcon from '../../assets/svg/CricketIcon';
+import PSControllerIcon from '../../assets/svg/PSControllerIcon';
+import ForwardBlackIcon from '../../assets/svg/ForwardBlackIcon';
+
+
 const SidebarWrapper = styled.aside`
   
   color: #fff;
-  width: 240px;
+  width: 258px;
   min-height: 100vh;
   padding-right: 8px;
   box-sizing: border-box;
@@ -111,6 +145,155 @@ const Arrow = styled.span`
   }
 `;
 
+// Семантические стили для блока NHL
+const NHLSection = styled.section`
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #388e1f;
+  overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: inherit;
+`;
+const NHLHeader = styled.header`
+  background: #388e1f;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px;
+  font-weight: 700;
+  font-size: 1rem;
+  
+`;
+const NHLTitle = styled.h2`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+`;
+const NHLContent = styled.main`
+  padding: 8px;
+  background: #fff;
+`;
+const NHLRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #222;
+`;
+const NHLTeamsList = styled.ul`
+  
+  margin-bottom: 6px;
+  padding: 0;
+  list-style: none;
+`;
+const NHLTeam = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 2px;
+`;
+
+const NHLTeamName = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+`;
+const NHLTeamText = styled.span`
+  color: #00251D;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+`;
+
+const OddsOutcome = styled.span`
+  color: #00251D;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+
+const OddsValue = styled.span`
+  color: #00251D;
+  text-align: right;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+`;
+const NHLScore = styled.strong`
+  font-weight: 700;
+  font-size: 16px;
+  color: #00251D;
+`;
+const NHLStatus = styled.p`
+  font-size: 12px;
+  color: #888;
+  
+`;
+const NHLDetails = styled.button`
+  color: #388e1f;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+`;
+const NHLOddsList = styled.div`
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+`;
+const NHLOddsItem = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #b7d3b2;
+  color: #00251D;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  box-sizing: border-box;
+  min-width: 70px;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  &:hover {
+    background: #a2c6a2;
+  }
+`;
+
 export const Sidebar = () => (
   <SidebarWrapper>
     <CollapseButton type="button">{"<< Collapse block"}</CollapseButton>
@@ -147,77 +330,244 @@ export const Sidebar = () => (
     </SectionButton>
     
     {/* Нижний блок не кнопка, а отдельный контейнер */}
-    <div style={{
-      background: '#fff',
-      borderRadius: 10,
-      border: '1px solid #388e1f',
-      overflow: 'hidden',
-      marginTop: 0,
-      
-      marginBottom: 0,
-      fontFamily: 'inherit',
-      
-    }}>
-      {/* Header */}
-      <div style={{
-        background: '#388e1f',
-        color: '#fff',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: '7px',
-        fontWeight: 700,
-        fontSize: '1rem',
-        
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-      }}>
-        <span style={{display: 'flex', alignItems: 'center', gap: 6}}>
+    <NHLSection>
+      <NHLHeader>
+        <NHLTitle>
           <WarrantyIcon />
           Top Games
-        </span>
-        <span style={{display: 'flex', alignItems: 'center', gap: 8}}>
+        </NHLTitle>
+        <nav aria-label="NHL pagination">
           <span style={{cursor: 'pointer', fontSize: 18}}>&lt;</span>
           <span style={{fontSize: 14}}>1/5</span>
           <span style={{cursor: 'pointer', fontSize: 18}}>&gt;</span>
-        </span>
-      </div>
-      {/* Content */}
-      <div style={{padding: '12px 14px 10px 14px', background: '#fff'}}>
-        <div style={{display: 'flex', alignItems: 'center', gap: 8, fontWeight: 700, fontSize: 16, color: '#222'}}>
-          <span style={{fontSize: 20}}>🏒</span>
+        </nav>
+      </NHLHeader>
+      <NHLContent>
+        <NHLRow>
+          <PuckIcon style={{width: 20, height: 20}} />
           NHL
-          <span style={{marginLeft: 'auto', color: '#388e1f', fontSize: 18, cursor: 'pointer'}}>☆</span>
-        </div>
-        <div style={{fontSize: 12, color: '#888', margin: '2px 0 8px 28px'}}>
+          <span style={{marginLeft: 'auto'}}><StarGreen style={{width: 18, height: 18, cursor: 'pointer'}} /></span>
+        </NHLRow>
+        <NHLStatus>
           Intermission, 40 minutes / Chicago Blackhawks in Possession
-        </div>
-        <div style={{marginLeft: 28, marginBottom: 6}}>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontWeight: 500, fontSize: 14, marginBottom: 2}}>
-            <span style={{display: 'flex', alignItems: 'center', gap: 4}}>
-              <span style={{fontSize: 16}}>👤</span> Carolina Hurricanes
+        </NHLStatus>
+        <NHLTeamsList>
+          <NHLTeam>
+            <NHLTeamName type="button"><Profile style={{width: 16, height: 16}} /><NHLTeamText>Carolina Hurricanes</NHLTeamText></NHLTeamName>
+            <NHLScore>2</NHLScore>
+          </NHLTeam>
+          <NHLTeam>
+            <NHLTeamName type="button"><Profile style={{width: 16, height: 16}} /><NHLTeamText>Chicago Blackhawks</NHLTeamText></NHLTeamName>
+            <NHLScore>2</NHLScore>
+          </NHLTeam>
+        </NHLTeamsList>
+        <NHLDetails>
+          Detailed score <ForwardGreen style={{width: 16, height: 16, verticalAlign: 'middle'}} />
+        </NHLDetails>
+        <NHLOddsList>
+          <NHLOddsItem type="button" variant="green"><OddsOutcome>W1</OddsOutcome><OddsValue>4.21</OddsValue></NHLOddsItem>
+          <NHLOddsItem type="button" variant="green"><OddsOutcome>X</OddsOutcome><OddsValue>2.9</OddsValue></NHLOddsItem>
+          <NHLOddsItem type="button" variant="green"><OddsOutcome>W2</OddsOutcome><OddsValue>4.21</OddsValue></NHLOddsItem>
+        </NHLOddsList>
+      </NHLContent>
+    </NHLSection>
+
+    {/* Sidebar Categories Block (reference style) */}
+    <CategoriesHeader>
+        <CategoriesTabs>
+          <CategoriesTab $active={true} $right>
+            <span style={{display: 'inline-flex', alignItems: 'center'}}>
+              <span style={{width: 8, height: 8, background: '#4ad14a', borderRadius: '50%', display: 'inline-block', marginRight: 6}}></span>
+              LIVE
             </span>
-            <span style={{fontWeight: 700, fontSize: 16}}>2</span>
-          </div>
-          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontWeight: 500, fontSize: 14}}>
-            <span style={{display: 'flex', alignItems: 'center', gap: 4}}>
-              <span style={{fontSize: 16}}>👤</span> Chicago Blackhawks
+          </CategoriesTab>
+          <CategoriesTab $active={false} $left>
+            SPORTS
+          </CategoriesTab>
+        </CategoriesTabs>
+      </CategoriesHeader>
+      
+    <CategoriesBlock>
+      
+      <CategoriesRow>
+        <span style={{display: 'flex', alignItems: 'center'}}>
+          <span style={{
+            marginRight: 2,
+            color: '#00251D',
+            fontFamily: 'Roboto',
+            fontSize: 16,
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: 'normal'
+          }}>ALL</span>
+          <span style={{
+            color: '#00251D',
+            fontFamily: 'Roboto',
+            fontSize: 16,
+            fontStyle: 'normal',
+            fontWeight: 700,
+            lineHeight: 'normal'
+          }}>805</span>
+        </span>
+        <CategoriesRowIcon>
+          <YouTubeIcon />
+        </CategoriesRowIcon>
+        <span style={{
+          color: '#00251D',
+          fontFamily: 'Roboto',
+          fontSize: 16,
+          fontStyle: 'normal',
+          fontWeight: 700,
+          lineHeight: 'normal'
+        }}>330</span>
+        <span style={{marginLeft: 'auto', fontSize: 18}}>
+          <EarthGlobeIcon />
+        </span>
+      </CategoriesRow>
+      {/* ...existing code... */}
+      <CategoriesSection>
+        <CategoriesTitle style={{
+          background: '#b7c9b7',
+          
+          padding: '4px 8px',
+          borderRadius: '0',
+          margin: 0,
+        }}>Top</CategoriesTitle>
+        <CategoriesList style={{background: '#fff', borderRadius: 0, margin: 0, padding: 0}}>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><SoccerBallIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Football</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(25)</CategoryCount>
             </span>
-            <span style={{fontWeight: 700, fontSize: 16}}>2</span>
-          </div>
-        </div>
-        <div style={{color: '#388e1f', fontWeight: 500, fontSize: 14, marginLeft: 28, marginBottom: 8, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 4}}>
-          Detailed score <span style={{fontSize: 14}}>&#9660;</span>
-        </div>
-        <div style={{display: 'flex', gap: 6, marginLeft: 28}}>
-          <div style={{background: '#e6f4ea', color: '#388e1f', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>W1</div>
-          <div style={{background: '#f5f5f5', color: '#222', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>4.21</div>
-          <div style={{background: '#e6f4ea', color: '#388e1f', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>X</div>
-          <div style={{background: '#f5f5f5', color: '#222', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>2.9</div>
-          <div style={{background: '#e6f4ea', color: '#388e1f', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>W2</div>
-          <div style={{background: '#f5f5f5', color: '#222', borderRadius: 6, padding: '2px 8px', fontWeight: 700, fontSize: 13}}>4.21</div>
-        </div>
-      </div>
-    </div>
+              <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+                  <CategoryVerticalDivider />
+                <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+              </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><TennisBallIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Tennis</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(15)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><BasketballIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Basketball</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(60)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><PuckIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Ice Hockey</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(13)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><VolleyballIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Volleyball</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(14)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><PingPongIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Table Tennis</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(19)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><CricketIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Cricket</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(9)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+          <CategoryItem style={{
+            display: 'flex', alignItems: 'center', padding: '8px 0', borderBottom: '1px solid #dbe6db', background: 'transparent', cursor: 'pointer', fontFamily: 'Roboto', fontSize: 18, fontWeight: 400, color: '#00251D', boxShadow: 'none', borderRadius: 0, position: 'relative'
+          }}>
+            <CategoryIcon style={{marginRight: 16}}><PSControllerIcon /></CategoryIcon>
+            <span style={{display: 'flex', alignItems: 'center', gap: 4, color: '#00251D'}}>
+              <CategoryName style={{fontWeight: 400, fontSize: 18, color: '#00251D', marginRight: 4}}>Esports</CategoryName>
+              <CategoryCount style={{fontWeight: 400, fontSize: 18, color: '#00251D'}}>(7)</CategoryCount>
+            </span>
+            <span style={{display: 'flex', alignItems: 'center', marginLeft: 'auto'}}>
+              <CategoryVerticalDivider />
+              <CategoryArrow style={{color: '#00251D', fontSize: 22, marginLeft: 16, zIndex: 1}}><ForwardBlackIcon /></CategoryArrow>
+            </span>
+          </CategoryItem>
+        </CategoriesList>
+      </CategoriesSection>
+      <CategoriesSection>
+        <CategoriesTitle>Categories from A to Z</CategoriesTitle>
+        <CategoriesList>
+          <CategoryItem>
+            <CategoryIcon>⚾️</CategoryIcon>
+            <CategoryName>Baseball</CategoryName>
+            <CategoryCount>2</CategoryCount>
+            <CategoryArrow>▼</CategoryArrow>
+          </CategoryItem>
+          <CategoryItem>
+            <CategoryIcon>🏇</CategoryIcon>
+            <CategoryName>Horse Racing</CategoryName>
+            <CategoryCount>6</CategoryCount>
+            <CategoryArrow>▼</CategoryArrow>
+          </CategoryItem>
+        </CategoriesList>
+      </CategoriesSection>
+      <CategoriesSection>
+        <CategoriesTitle>1xPlay</CategoriesTitle>
+        <CategoriesList>
+          <CategoryItem>
+            <CategoryIcon>🎲</CategoryIcon>
+            <CategoryName>Baccarat</CategoryName>
+            <CategoryCount>6</CategoryCount>
+            <CategoryArrow>▼</CategoryArrow>
+          </CategoryItem>
+        </CategoriesList>
+      </CategoriesSection>
+    </CategoriesBlock>
   </SidebarWrapper>
 );

@@ -1,0 +1,34 @@
+import React from "react";
+
+const ForwardGreen = (props) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    {...props}
+  >
+    <rect x="18" width="18" height="18" transform="rotate(90 18 0)" fill="url(#pattern0_80_746)" />
+    <defs>
+      <pattern
+        id="pattern0_80_746"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use xlinkHref="#image0_80_746" transform="scale(0.01)" />
+      </pattern>
+      <image
+        id="image0_80_746"
+        width="100"
+        height="100"
+        preserveAspectRatio="none"
+        xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAABG0lEQVR4nO3csU0DQRRFURdhdisgh+jt0BZ4LUG7hFADCAnHIALvszlHmmSiL11NOH+3AwAAAAAAAAAA4N8Zj/O09Qx8e3i6uRuH6S3r9HK6Y+MYY50/vo4oRTGGKH0xhih9MYYo5zOO+/uxTu8/xTidZZ3XrWe+ajnsb8c6v/42iJdyBhGlT0TpE1H6RJQ+EaVPROkTUfpElD4RpU9E6RNR+kSUPhGlT0TpE1H6RJQ+EaVPRLn8IMthet567qsUMXpEjB4Ro0fE6BExekSMHhGjR8ToETF6RIweEaNHxOgRMXpEjB4Ro0fE6BExekSMLsO36MtdHLB4GT1RFjF6oixi9ERZxOiJsojRY1jxBwAAAAAAAAAAwO5vPgFgqg6pCSDHsAAAAABJRU5ErkJggg=="
+      />
+    </defs>
+  </svg>
+);
+
+export default ForwardGreen;

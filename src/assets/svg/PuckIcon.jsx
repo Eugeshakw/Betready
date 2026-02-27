@@ -1,0 +1,34 @@
+import React from "react";
+
+const PuckIcon = (props) => (
+  <svg
+    width="18"
+    height="18"
+    viewBox="0 0 18 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    {...props}
+  >
+    <rect width="18" height="18" fill="url(#pattern0_80_740)" />
+    <defs>
+      <pattern
+        id="pattern0_80_740"
+        patternContentUnits="objectBoundingBox"
+        width="1"
+        height="1"
+      >
+        <use xlinkHref="#image0_80_740" transform="scale(0.01)" />
+      </pattern>
+      <image
+        id="image0_80_740"
+        width="100"
+        height="100"
+        preserveAspectRatio="none"
+        xlinkHref="data:image/png;base64,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"
+      />
+    </defs>
+  </svg>
+);
+
+export default PuckIcon;
