@@ -1,18 +1,37 @@
+
 import React from "react";
 import styled from "styled-components";
+
 import CloseIcon from "../assets/svg/CloseIcon";
 import { ForwardRightIcon } from "../assets/svg/ForwardRightIcon";
+import Profile from "../assets/svg/Profile";
+import CricketIcon from "../assets/svg/CricketIcon";
 
 const BlockWrapper = styled.div`
-  background: #fff;
+  
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  
   padding: 0;
   width: 100%;
   margin-bottom: 24px;
   
 `;
 
+const InfoRowsWrapper = styled.div`
+  
+  display: flex;
+  flex-direction: column;
+  gap: 8px; 
+`;
+
+const TournamentMarketWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 8px;
+    justify-content: space-between;
+`;
 const BlockHeader = styled.div`
   background: #397617;
   color: #fff;
@@ -27,16 +46,16 @@ const BlockHeader = styled.div`
 
 const EventsList = styled.div`
   padding: 8px 16px;
+  background-color: #B0C8A2;
+  border-radius: 0 0 8px 8px;
 `;
 
 const EventRow = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  
   background: #fff;
   border-radius: 8px;
   margin-bottom: 8px;
-  padding: 0;
+  padding: 8px 10px;
   font-size: 15px;
   color: #1a3c2f;
   box-shadow: none;
@@ -56,7 +75,7 @@ const EventDate = styled.div`
   align-items: flex-start;
   justify-content: center;
   gap: 2px;
-  border-right: 1px solid #bbb;
+  border-right: 1px solid #B0C8A2;;
 `;
 
 const TeamsBlock = styled.div`
@@ -78,6 +97,7 @@ const TeamRow = styled.div`
 const TournamentBlock = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 6px;
   color: #1a3c2f;
   font-size: 13px;
@@ -87,40 +107,46 @@ const TournamentBlock = styled.div`
 const MarketBlock = styled.div`
   color: #1a3c2f;
   font-size: 13px;
-  margin-top: 8px;
+  
   text-align: right;
 `;
 
 const OddsBlock = styled.div`
   background: #B0C8A2;
   color: #1a3c2f;
-  font-weight: 700;
-  font-size: 18px;
   border-radius: 8px;
-  padding: 8px 18px;
+  padding: 4px 13px;
   min-width: 60px;
+  color: #00251D;
   text-align: center;
-  align-self: flex-start;
-  margin-left: 12px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  
+  
 `;
 
 const InfoRow = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: #fff;
   padding: 8px 16px;
   font-size: 15px;
+  border-radius: 8px;
   color: #1a3c2f;
 `;
 
 const AddButton = styled.button`
   width: 100%;
-  background: #6ed36e;
+  background: #63D92B;;
   color: #fff;
   font-weight: bold;
   font-size: 17px;
   border: none;
-  border-radius: 0 0 8px 8px;
+  border-radius: 8px;
   padding: 12px 0;
   cursor: pointer;
   margin-top: 8px;
@@ -197,44 +223,57 @@ const AccumulatorBlock = ({ title, events, bonus, totalOdds }) => {
         </div>
       </BlockHeader>
       <EventsList>
+        
         {usedEvents.map((ev, idx) => (
-          <EventRow key={ev.id || idx}>
-            <EventDate>
-              <span>{ev.date.split(' ')[0]}</span>
-              <span style={{fontWeight:400, fontSize:12, marginTop:2}}>{ev.date.split(' ')[1]}</span>
-            </EventDate>
-            <TeamsBlock>
-              <TeamRow>
-                {/* Здесь можно вставить иконку игрока */}
-                <span role="img" aria-label="user" style={{color:'#B0C8A2'}}>👤</span>
-                {ev.teams.split(' vs ')[0]}
-              </TeamRow>
-              <TeamRow>
-                <span role="img" aria-label="user" style={{color:'#B0C8A2'}}>👤</span>
-                {ev.teams.split(' vs ')[1]}
-              </TeamRow>
+          <div key={ev.id || idx}>
+            <EventRow>
+              <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%'}}>
+                <EventDate>
+                  <span>{ev.date.split(' ')[0]}</span>
+                  <span style={{fontWeight:400, fontSize:12, marginTop:2}}>{ev.date.split(' ')[1]}</span>
+                </EventDate>
+                <TeamsBlock>
+                  <TeamRow>
+                    {/* Иконка игрока */}
+                    <Profile style={{color:'#B0C8A2'}} width={24} height={24} />
+                    {ev.teams.split(' vs ')[0]}
+                  </TeamRow>
+                  <TeamRow>
+                    <Profile style={{color:'#B0C8A2'}} width={24} height={24} />
+                    {ev.teams.split(' vs ')[1]}
+                  </TeamRow>
+                </TeamsBlock>
+                <OddsBlock>{ev.odds}</OddsBlock>
+              </div>
               <TournamentBlock>
-                {/* Здесь можно вставить иконку турнира */}
-                <span role="img" aria-label="tournament" style={{color:'#1a3c2f'}}>🖊️</span>
-                {ev.tournament}
+                {/* Иконка турнира */}
+                <div style={{display: 'flex', alignItems: 'center', gap: 4}}>
+                  <CricketIcon style={{color:'#1a3c2f'}} width={18} height={18} />
+                  {ev.tournament}
+                </div>
+                
+                <MarketBlock>{ev.market}</MarketBlock>
               </TournamentBlock>
-            </TeamsBlock>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'flex-end', flex:1}}>
-              <OddsBlock>{ev.odds}</OddsBlock>
-              <MarketBlock>{ev.market}</MarketBlock>
-            </div>
-          </EventRow>
+            </EventRow>
+            
+          </div>
+          
         ))}
+
+        <InfoRowsWrapper>
+          <InfoRow>
+            <span>BONUS from 1xBet</span>
+            <span style={{fontWeight:700}}>{usedBonus}</span>
+          </InfoRow>
+          <InfoRow>
+            <span>Overall odds</span>
+            <span style={{fontWeight:700}}>{usedTotalOdds}</span>
+          </InfoRow>
+        </InfoRowsWrapper>
+        <AddButton>ADD TO BET SLIP</AddButton>
       </EventsList>
-      <InfoRow>
-        <span>BONUS from 1xBet</span>
-        <span style={{fontWeight:700}}>{usedBonus}</span>
-      </InfoRow>
-      <InfoRow>
-        <span>Overall odds</span>
-        <span style={{fontWeight:700}}>{usedTotalOdds}</span>
-      </InfoRow>
-      <AddButton>ADD TO BET SLIP</AddButton>
+      
+      
     </BlockWrapper>
   );
 };

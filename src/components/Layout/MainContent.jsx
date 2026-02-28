@@ -8,6 +8,7 @@ import MarketsNavigation from '../MarketsNavigation/MarketsNavigation';
 import Markets from '../Markets/Markets';
 import SportsTable from '../SportsTable/SportsTable';
 import AccumulatorBlock from '../AccumulatorBlock';
+
 const MainWrapper = styled.main`
 	flex: 1;
 	
@@ -163,7 +164,7 @@ export const MainContent = () => {
           totalOdds={"7.433"}
         />
       </div>
-      {/* ...остальной контент ... */}
+      
     </MainWrapper>
   );
 }

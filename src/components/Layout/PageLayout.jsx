@@ -3,7 +3,7 @@ import { TopBar } from './TopBar';
 import { Header } from './Header';
 import { Sidebar } from './Sidebar';
 import { MainContent } from './MainContent';
-import { Footer } from './Footer';
+import Footer from './Footer';
 import RightSidebar from './RightSidebar';
 
 const LayoutWrapper = styled.div`
