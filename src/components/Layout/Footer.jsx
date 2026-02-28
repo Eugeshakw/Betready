@@ -237,7 +237,7 @@ const FooterCopyrightBlock = styled.div`
         font-weight: 700;
         line-height: normal;
         text-align: left;
-        padding: 35px 36px;
+        padding: 35px 20px;
         background-color: #397617;;
         line-height: 1.4;
       `;
@@ -381,7 +381,16 @@ const Footer = () => (
       </FooterColumn>
     </FooterGrid>
     <PartnersRow>
-      <p style={{fontWeight: 700, fontSize: 16, color: '#174c1b', marginBottom: 4, minWidth: 90}}>PARTNERS</p>
+      <p style={{
+        color: '#FFF',
+        fontFamily: 'Roboto',
+        fontSize: 16,
+        fontStyle: 'normal',
+        fontWeight: 700,
+        lineHeight: 'normal',
+        marginBottom: 4,
+        minWidth: 90
+      }}>PARTNERS</p>
       
       <PartnerLogosFlex>
         <PartnerLogoWrapper>
