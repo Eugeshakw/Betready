@@ -20,6 +20,7 @@ import HeadsetIcon from '../../assets/svg/HeadsetIcon.jsx';
 import GameControllerIcon from '../../assets/images/footer/GameControllerIcon.jsx';
 import infotextimg from  "../../assets/images/footer/infotextimg.png";
 import InstagramIcon from '../../assets/svg/InstagramIcon.jsx';
+import TelegramIcon from '../../assets/svg/TelegramIcon.jsx';
 const FooterWrapper = styled.footer`
   
   color: #fff;
@@ -108,7 +109,7 @@ const InfoText = styled.div`
 const FooterBottom = styled.div`
   display: flex;
   
-  
+  gap: 8px;
   
   color: #fff;
   font-size: 12px;
@@ -228,7 +229,7 @@ const FooterCopyrightBlock = styled.div`
         display: flex;
         flex-direction: column;
         border-radius: 8px;
-        
+        width: 100%;
         color: #FFF;
         font-family: Roboto;
         font-size: 12px;
@@ -240,6 +241,71 @@ const FooterCopyrightBlock = styled.div`
         background-color: #397617;;
         line-height: 1.4;
       `;
+const SocialIconsBlock = styled.div`
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        background: #397617;
+        border-radius: 8px;
+        padding: 8px 24px;
+        
+      `;
+const SocialBlockWrapper = styled.div`
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        
+      `;
+
+      const AgeLimitBlock = styled.div`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #174c1b;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 8px;
+        padding: 16px 14px;
+        
+        span{
+          color: #FFF;
+          font-family: Roboto;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      `;
+const MobileVersionButton = styled.button`
+        background: #7be021;
+        color: #00251D;
+        text-align: center;
+        font-family: Roboto;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        border: none;
+        border-radius: 8px;
+        padding: 7px 38px;
+        width: 100%;
+        
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        &:hover {
+          background: #6ad11c;
+          color: #00251d;
+        }
+      `;
+const FooterSocialSection = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        
+      `;                        
 const Footer = () => (
   <FooterWrapper>
     <FooterSection>
@@ -386,7 +452,7 @@ Participation in any game is subject to the player’s acceptance of the Terms 
     
     <FooterBottom>
       <FooterCopyrightBlock>
-        Copyright © 2026 «1xBet».
+        Copyright © 2026 «1xBet».<br />
         1xBet uses cookies to ensure the best user experience. By remaining on the website, you consent to the use of your cookie files on 1xBet. Find out more
       </FooterCopyrightBlock>
       
@@ -400,19 +466,23 @@ Participation in any game is subject to the player’s acceptance of the Terms 
         </SupportTextBlock>
       </SupportServiceWrapper>
       
-      <div>
-        <div>
-          <div>
-             
-          </div>
-          <div>
+      <FooterSocialSection>
+        <SocialBlockWrapper>
+          <SocialIconsBlock>
             <InstagramIcon width={42} height={42} />
-          </div>
-        </div>
-        <div>
-
-        </div>
-      </div>
+            <TelegramIcon width={36} height={36} />
+          </SocialIconsBlock>
+          <AgeLimitBlock>
+            <span>18+</span>
+          </AgeLimitBlock>
+        </SocialBlockWrapper>
+        <MobileVersionButton type="button">MOBILE VERSION</MobileVersionButton>
+      </FooterSocialSection>
+      
+      
+      
+      
+      
       
     </FooterBottom>
   </FooterWrapper>
