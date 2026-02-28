@@ -498,3 +498,4 @@ Participation in any game is subject to the player’s acceptance of the Terms 
 );
 
 export default Footer;
+export { Footer };
