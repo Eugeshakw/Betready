@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import LeagueHeader from "./LeagueHeader";
 import USAIcon from "../../assets/svg/USAIcon.jsx";
+import EnglandCircularIcon from "../../assets/svg/EnglandCircularIcon.jsx";
 import BasketballIcon from "../../assets/svg/BasketballIcon.jsx";
 import SoccerBallIcon from "../../assets/svg/SoccerBallIcon.jsx";
 import MatchInfoRow from "./MatchInfoRow";
@@ -86,6 +87,7 @@ const OddsCell = styled.div`
 `;
 
 const TableFooter = styled.div`
+      
   display: flex;
   justify-content: flex-end;
   background: #1a3c2f;
@@ -97,7 +99,7 @@ const TableFooter = styled.div`
 const leagues = [
   {
     name: "NBA",
-    icon: <BasketballIcon />,
+      icon: <BasketballIcon width={24} height={24} />,
     countryIcon: <USAIcon />,
     matches: [
       {
@@ -108,7 +110,7 @@ const leagues = [
       },
       {
         teams: ["Houston Rockets", "San Antonio Spurs"],
-        scores: [8, 8],
+        scores: [25, 30],
         odds: [2.12, "-", 1.72],
         footer: "+217"
       },
@@ -122,25 +124,25 @@ const leagues = [
   },
   {
     name: "Premier League",
-    icon: <SoccerBallIcon />,
-    countryIcon: null,
+    icon: <SoccerBallIcon width={24} height={24}/>,
+    countryIcon: <EnglandCircularIcon width={24} height={24} />, 
     matches: [
       {
         teams: ["Man Utd", "Arsenal"],
-        scores: [1, 1],
-        odds: [2.12, 1.72, 1.95, 1.85],
+        scores: [25, 30],
+        odds: [2.12, "-", 1.72],
         footer: "+364"
       },
       {
         teams: ["Westham", "Liverpool"],
-        scores: [0, 0],
-        odds: [1.536, 2.496, 2.45, 1.63],
+        scores: [25, 30],
+        odds: [2.12, "-", 1.72],
         footer: "+217"
       },
       {
         teams: ["Chelsea", "Everton"],
-        scores: [3, 1],
-        odds: [2.12, 1.72, 2.65, 1.95],
+        scores: [25, 30],
+        odds: [2.12, "-", 1.72],
         footer: "+183"
       }
     ]
@@ -160,7 +162,7 @@ const SportsTable = () => (
         {league.matches.map((match, mIdx) => (
           <MatchInfoRow key={mIdx} match={match} />
         ))}
-        {/* <TableFooter>{league.matches[league.matches.length - 1].footer}</TableFooter> */}
+        
       </div>
     ))}
   </TableWrapper>

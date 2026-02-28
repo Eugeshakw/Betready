@@ -4,6 +4,8 @@ import { GameSlider } from '../GameSlider';
 import { TopEventsSlider } from '../TopEventsSlider';
 import { EventsNavBar } from '../TopEvents/LeagueNavBar/EventsNavBar';
 import { CategoryNavBar } from '../TopEvents/CategoryNavBar/CategoryNavBar';
+import MarketsNavigation from '../MarketsNavigation/MarketsNavigation';
+import Markets from '../Markets/Markets';
 import SportsTable from '../SportsTable/SportsTable';
 const MainWrapper = styled.main`
 	flex: 1;
@@ -79,6 +81,8 @@ export const MainContent = () => (
     <EventsNavBar />
     <CategoryNavBar />
     <SportsTable />
-    {/* ...остальной контент ... */}
+    <MarketsNavigation/>
+      <Markets />
+      {/* ...остальной контент ... */}
   </MainWrapper>
 )

@@ -4,6 +4,12 @@ import styled from "styled-components";
 import StarIcon from "./StarIcon";
 import ProfileIcon from "./ProfileIcon";
 import PinIcon from "./PinIcon";
+import BasketballCourtIcon from "../../assets/svg/BasketballCourtIcon.jsx";
+import ComboChartIcon from "../../assets/svg/ComboChartIcon.jsx";
+import ComboChartIcon1 from "../../assets/svg/ComboChartIcon1.jsx";
+import FeaturesListIcon from "../../assets/svg/FeaturesListIcon.jsx";
+import LeaderboardIcon from "../../assets/svg/LeaderboardIcon.jsx";
+import ForwardIcon from "./ForwardIcon";
 
 const MatchRow = styled.div`
   display: flex;
@@ -152,17 +158,25 @@ const MatchInfoRow = ({ match }) => (
               <ScoreDivider />
               <Score>{match.scores[0]}</Score>
             </StyledScoreBlock>
+            
           
           
         </TeamInfo>
+        
         </MatchMain>
       <MatchFooter>
         <span>12:03 / Break / Including Overtime</span>
-        <PinIcon style={{width: 20, height: 20}} />
-        <ProfileIcon style={{width: 20, height: 20}} />
-        <StarIcon style={{width: 20, height: 20, color: '#39d617'}} />
-        {/* Здесь можно добавить другие SVG-иконки */}
+        <BasketballCourtIcon style={{width: 16, height: 16}} />
+        <ComboChartIcon style={{width: 16, height: 16}} />
+        <ComboChartIcon1 style={{width: 16, height: 16, color: '#39d617'}} />
+        <FeaturesListIcon style={{width: 16, height: 16}} />
+        <LeaderboardIcon style={{width: 16, height: 16}} />
+          <div style={{ marginLeft: 'auto' }}>
+            <ForwardIcon/>
+          </div>
+        
       </MatchFooter>
+      
     </MatchRow>
     <div style={{display: 'flex', alignItems: 'stretch'}}>
       <OddsButtonsBlock>

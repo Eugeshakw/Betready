@@ -14,7 +14,7 @@ const LeagueHeaderWrapper = styled.div`
   padding: 8px 16px;
 `;
 const LeagueEmptySpan = styled.span`
-    width: 100%;
+    /* width: 100%; */
     height: 16px;
     display: block;
     color: #00251D;
@@ -107,8 +107,8 @@ const HeaderCell = styled.div`
   text-align: center;
   color: #1a3c2f;
   font-size: 13px;
-  min-width: 70px;
-  max-width: 90px;
+  /* min-width: 70px;
+  max-width: 90px; */
   padding: 0 4px;
   box-sizing: border-box;
 `;
