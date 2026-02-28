@@ -3,6 +3,7 @@ import PinIcon from "../../assets/svg/PinIcon";
 import { ForwardIcon } from "./ForwardIcon";
 import styled from "styled-components";
 
+
 const BlockWrapper = styled.div`
   background: #B0C8A2;;
   border-radius: 8px;
@@ -12,15 +13,19 @@ const BlockWrapper = styled.div`
 `;
 
 const BlockHeader = styled.div`
-  background: #B0C8A2;;
+  background: #B0C8A2;
   color: #00251D;
   font-weight: bold;
   font-size: 16px;
   padding: 8px 16px;
-  
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  gap: 12px;
+  border-bottom: 1px solid #a3bfa3;
+  z-index: 1;
+  height: 48px;
 `;
 
 const BlockContent = styled.div`
@@ -36,7 +41,8 @@ const Option = styled.button`
   border: none;
   justify-content: space-between;
   padding: 6px 12px;
-  flex: 1 1 calc(33.33% - 4px);
+  flex: 1 1
+    calc(${props => 100 / (props.columns || 3)}% - 4px);
   min-width: 90px;
   max-width: 100%;
   display: flex;
@@ -67,16 +73,20 @@ const Odds = styled.span`
     line-height: normal;
 `;
 
-const MarketBlock = ({ title, options }) => (
+const MarketBlock = ({ title, options, columns = 3 }) => (
   <BlockWrapper>
     <BlockHeader>
-      <PinIcon width={20} height={20} style={{marginRight: 8}} />
-      {title}
-      <span style={{marginLeft: 'auto'}}><ForwardIcon width={18} height={18} /></span>
+      <span style={{display: 'flex', alignItems: 'center', gap: 8}}>
+        <PinIcon width={20} height={20} />
+        {title}
+      </span>
+      <span style={{marginLeft: 'auto', display: 'flex', alignItems: 'center'}}>
+        <ForwardIcon width={18} height={18} />
+      </span>
     </BlockHeader>
     <BlockContent>
-      {options.map((opt, idx) => (
-        <Option key={idx} type="button">
+      {options && options.map((opt, idx) => (
+        <Option type="button" key={opt.name + idx} columns={columns}>
           {opt.name}
           <Odds>{opt.odds}</Odds>
         </Option>

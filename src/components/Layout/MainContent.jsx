@@ -7,6 +7,7 @@ import { CategoryNavBar } from '../TopEvents/CategoryNavBar/CategoryNavBar';
 import MarketsNavigation from '../MarketsNavigation/MarketsNavigation';
 import Markets from '../Markets/Markets';
 import SportsTable from '../SportsTable/SportsTable';
+import AccumulatorBlock from '../AccumulatorBlock';
 const MainWrapper = styled.main`
 	flex: 1;
 	
@@ -73,16 +74,96 @@ const SliderBanner = () => (
   </div>
 )
 
-export const MainContent = () => (
-  <MainWrapper>
-    <SliderBanner />
-    <GameSlider />
-    <TopEventsSlider />
-    <EventsNavBar />
-    <CategoryNavBar />
-    <SportsTable />
-    <MarketsNavigation/>
+export const MainContent = () => {
+  // Пример данных для первого блока
+  const events1 = [
+    {
+      id: 1,
+      teams: 'Zimbabwe U19 vs Pakistan U19',
+      date: '22/01 06:30',
+      tournament: 'World Cup U19 2026',
+      market: 'Over Total Runs Team 2 > 3 - Over 0.5',
+      odds: '2.12'
+    },
+    {
+      id: 2,
+      teams: 'Republic of Ireland U19 vs Japan U19',
+      date: '22/01 09:00',
+      tournament: 'World Cup U19 2026',
+      market: '1st Wkt',
+      odds: '1.44'
+    },
+    {
+      id: 3,
+      teams: 'West Indies U19 vs South Africa U19',
+      date: '22/01 13:00',
+      tournament: 'World Cup U19 2026',
+      market: 'Team Wins Wkt',
+      odds: '1.492'
+    },
+    {
+      id: 4,
+      teams: 'Bangladesh (Women) vs Namibia (Women)',
+      date: '22/01 16:15',
+      tournament: 'Women - Global Cricket',
+      market: 'Over Total Runs Team 2 > 3 - Over 0.5',
+      odds: '1.85'
+    }
+  ];
+
+  // Пример данных для второго блока
+  const events2 = [
+    {
+      id: 1,
+      teams: 'Minnesota Frost (Women) vs Montreal Victorie (Women)',
+      date: '22/01 01:00',
+      tournament: 'PHWL. Women',
+      market: 'Total Over 1.5',
+      odds: '1.664'
+    },
+    {
+      id: 2,
+      teams: 'Avai vs Chapecoense',
+      date: '22/01 14:00',
+      tournament: 'Brazil. Campeonato Catarinense',
+      market: 'Handicap (1)',
+      odds: '1.87'
+    },
+    {
+      id: 3,
+      teams: 'Deportivo Malacateco vs Deportivo Marquense',
+      date: '22/01 17:00',
+      tournament: 'Guatemala. Liga Nacional',
+      market: '1X2',
+      odds: '1.995'
+    }
+  ];
+
+  return (
+    <MainWrapper>
+      <SliderBanner />
+      <GameSlider />
+      <TopEventsSlider />
+      <EventsNavBar />
+      <CategoryNavBar />
+      <SportsTable />
+      <MarketsNavigation/>
       <Markets />
+      <div style={{display: 'flex', gap: 16, alignItems: 'flex-start'}}>
+        <AccumulatorBlock
+          title="Accumulator Of The Day"
+          events={events1}
+          bonus={"1.1"}
+          totalOdds={"7.433"}
+        />
+        <AccumulatorBlock
+          title="Live Accumulator Of The Day"
+          events={events2}
+          bonus={"1.1"}
+          totalOdds={"7.433"}
+        />
+      </div>
       {/* ...остальной контент ... */}
-  </MainWrapper>
-)
+    </MainWrapper>
+  );
+}

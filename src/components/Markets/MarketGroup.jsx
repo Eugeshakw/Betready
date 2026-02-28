@@ -5,7 +5,10 @@ const GroupWrapper = styled.div`
   background: #B0C8A2;
   border-radius: 8px;
   margin-bottom: 16px;
-  padding: 0;
+  padding-top: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -17,14 +20,16 @@ const GroupHeader = styled.div`
   color: #00251D;
   font-weight: bold;
   font-size: 16px;
-  padding: 8px 16px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  
 `;
 
 const OptionsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  padding: 8px 16px 16px 16px;
+  
 `;
 
 const Option = styled.button`
@@ -37,6 +42,7 @@ const Option = styled.button`
   min-width: 0;
   max-width: 100%;
   display: flex;
+  
   align-items: center;
   color: #00251D;
   font-family: Roboto;

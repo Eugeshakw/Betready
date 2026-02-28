@@ -1,20 +1,26 @@
-
-
 import React from "react";
 import styled from "styled-components";
-import MarketGroup from "./MarketGroup";
+import MarketBlock from "./MarketBlock";
 
 
 const MarketsWrapper = styled.div`
   width: 100%;
   background: #fff;
   padding: 8px;
+  border-radius: 0 0 4px 8px;
   margin-bottom: 32px;
 `;
 
-const GridWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+const ColumnsWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+`;
+
+const Column = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 `;
 
@@ -33,14 +39,27 @@ const marketGroups = [
     options: [
       { name: "1X", odds: 2.056 },
       { name: "12", odds: 1.245 },
-      { name: "2X", odds: 1.192 }
+      { name: "12", odds: 1.245 },
+      
     ]
   },
+  
   {
     title: "Both Teams to Score",
     options: [
       { name: "Yes", odds: 2.168 },
       { name: "No", odds: 1.646 }
+    ]
+  },
+  {
+    title: "1X2 + Each Team To Score",
+    options: [
+      { name: "1X", odds: 2.056 },
+      { name: "12", odds: 1.245 },
+      { name: "12", odds: 1.245 },
+      { name: "12", odds: 1.245 },
+      { name: "12", odds: 1.245 },
+      { name: "2X", odds: 1.192 }
     ]
   },
   {
@@ -67,7 +86,24 @@ const marketGroups = [
     ]
   },
   {
-    title: "Asian Handicap",
+    title: "Asian Total",
+    options: [
+      { name: "Over 0.5", odds: 1.06 },
+      { name: "Under 0.5", odds: 8 },
+      { name: "Over 1", odds: 1.1 },
+      { name: "Under 1", odds: 6.9 },
+      { name: "Over 1.5", odds: 1.31 },
+      { name: "Under 1.5", odds: 3.25 },
+      { name: "Over 2", odds: 1.625 },
+      { name: "Under 2", odds: 2 },
+      { name: "Over 2.5", odds: 2.21 },
+      { name: "Under 2.5", odds: 1.665 },
+      { name: "Over 3", odds: 3.3 },
+      { name: "Under 3", odds: 1.336 },
+    ]
+  },
+  {
+    title: "Asian Total",
     options: [
       { name: "1 (+0.25)", odds: 4.38 },
       { name: "2 (+0.25)", odds: 1.19 },
@@ -102,15 +138,41 @@ const marketGroups = [
   }
 ];
 
+const Markets = () => {
+  const leftGroups = marketGroups.filter((_, idx) => idx % 2 === 0);
+  const rightGroups = marketGroups.filter((_, idx) => idx % 2 === 1);
 
-const Markets = () => (
-  <MarketsWrapper>
-    <GridWrapper>
-      {marketGroups.map((group, idx) => (
-        <MarketGroup key={idx} title={group.title} options={group.options} />
-      ))}
-    </GridWrapper>
-  </MarketsWrapper>
-);
+  const getColumns = (title) => {
+    if (["Total", "Asian Handicap", "Handicap"].includes(title)) return 2;
+    return 3;
+  };
+
+  return (
+    <MarketsWrapper>
+      <ColumnsWrapper>
+        <Column>
+          {leftGroups.map((group) => (
+            <MarketBlock
+              key={group.title}
+              title={group.title}
+              options={group.options}
+              columns={getColumns(group.title)}
+            />
+          ))}
+        </Column>
+        <Column>
+          {rightGroups.map((group) => (
+            <MarketBlock
+              key={group.title}
+              title={group.title}
+              options={group.options}
+              columns={getColumns(group.title)}
+            />
+          ))}
+        </Column>
+      </ColumnsWrapper>
+    </MarketsWrapper>
+  );
+};
 
 export default Markets;
