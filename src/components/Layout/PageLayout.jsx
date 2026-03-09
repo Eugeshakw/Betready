@@ -1,21 +1,20 @@
-import styled from 'styled-components';
-import { TopBar } from './TopBar';
-import { Header } from './Header';
-import { Sidebar } from './Sidebar';
-import { MainContent } from './MainContent';
-import Footer from './Footer';
-import RightSidebar from './RightSidebar';
+import styled from "styled-components";
+import { TopBar } from "./TopBar";
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
+import { MainContent } from "./MainContent";
+import Footer from "./Footer";
+import RightSidebar from "./RightSidebar";
 
-const LayoutWrapper = styled.div`
+export const LayoutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-left: 8px;
   padding-right: 8px;
-  
 `;
 
-const ContentWrapper = styled.div`
+export const ContentWrapper = styled.div`
   display: flex;
   flex: 1;
 `;
