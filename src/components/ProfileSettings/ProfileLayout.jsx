@@ -18,7 +18,7 @@ import { mockUser } from "../ProfileSettings/mockUser.data.js";
 
 export const ProfileLayoutWrapper = styled.div`
   background-color: #397617;
-  padding: 20px;
+  // padding: 20px;
   border-radius: 8px;
   display: flex;
   width: 100%;
@@ -70,7 +70,7 @@ const ProfileLayout = () => {
           onTabClick={handleTabClick}
           user={mockUser}
         />
-        <ProfileContent activeTab={activeTab} />
+        <ProfileContent activeTab={activeTab} user={mockUser} />
       </ProfileInnerWrapper>
     </ProfileLayoutWrapper>
   );

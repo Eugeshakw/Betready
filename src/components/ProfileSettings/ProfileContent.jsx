@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import AccountSettings from "./tabs/AccountSettings";
 
 const ContentWrapper = styled.main`
   background-color: #ffffff;
@@ -47,7 +48,7 @@ const ActiveTabText = styled.h2`
   /* Add underline style for active tab */
 `;
 
-const ProfileContent = ({ activeTab }) => {
+const ProfileContent = ({ activeTab, user }) => {
   if (!activeTab) {
     return (
       <ContentWrapper>
@@ -68,6 +69,14 @@ const ProfileContent = ({ activeTab }) => {
         )}
         {activeTab.text && <ActiveTabText>{activeTab.text}</ActiveTabText>}
       </TabHeader>
+
+      <div>
+        {activeTab.id === "account-settings" && <AccountSettings user={user} />}
+        {/* Add conditional rendering for other tabs here */}
+        {activeTab.id !== "account-settings" && (
+          <p>Content for {activeTab.text} will be here soon.</p>
+        )}
+      </div>
     </ContentWrapper>
   );
 };

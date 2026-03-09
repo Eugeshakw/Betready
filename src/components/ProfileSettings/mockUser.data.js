@@ -8,6 +8,9 @@ export const mockUser = {
     phone: "+380 50 123 45 67",
     dateOfBirth: "1996-12-15",
     avatarUrl: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
+    gender: "male",
+    country: "Moldova",
+    city: "Bebropol",
   },
 
   accountStatus: {

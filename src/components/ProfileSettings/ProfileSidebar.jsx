@@ -13,11 +13,10 @@ const SidebarWrapper = styled.aside`
 const UserInfoWrapper = styled.div`
   display: flex;
   align-items: center;
-  height: 78px;
   color: #00251d;
 `;
 
-const Avatar = styled.img`
+export const Avatar = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
