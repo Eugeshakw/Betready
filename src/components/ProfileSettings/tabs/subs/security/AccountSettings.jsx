@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-import ProfileIcon from "../../../assets/svg/profile/Profile.svg";
-import EmailIcon from "../../../assets/svg/profile/Email.svg";
-import PhoneIcon from "../../../assets/svg/profile/Phone.svg";
-import BirthDateIcon from "../../../assets/svg/profile/Birth Date.svg";
-import GenderIcon from "../../../assets/svg/profile/Gender.svg";
-import CountryIcon from "../../../assets/svg/profile/Country.svg";
-import CityIcon from "../../../assets/svg/profile/City Buildings.svg";
+import ProfileIcon from "../../../../../assets/svg/profile/Profile.svg";
+import EmailIcon from "../../../../../assets/svg/profile/Email.svg";
+import PhoneIcon from "../../../../../assets/svg/profile/Phone.svg";
+import BirthDateIcon from "../../../../../assets/svg/profile/Birth Date.svg";
+import GenderIcon from "../../../../../assets/svg/profile/Gender.svg";
+import CountryIcon from "../../../../../assets/svg/profile/Country.svg";
+import CityIcon from "../../../../../assets/svg/profile/City Buildings.svg";
 
-import { Avatar } from "../ProfileSidebar.jsx";
+import { Avatar } from "../../../ProfileSidebar.jsx";
 
 const AccountSettingsWrapper = styled.div``;
 
@@ -22,14 +22,14 @@ const VerificationBanner = styled.div`
   border-radius: 8px;
   padding: 16px 20px;
   margin-bottom: 20px; /* Відстань до таблиці знизу */
+  margin-top: 20px;
   width: 100%;
 `;
 
 const BannerLeft = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px;
-
+  gap: 8px;
   svg {
     width: 24px;
     height: 24px;
@@ -37,11 +37,22 @@ const BannerLeft = styled.div`
   }
 `;
 
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`;
+
 const BannerText = styled.span`
   color: #00251d;
   font-weight: 700;
   font-size: 16px;
-  display: flex;
+`;
+
+const MemberInfoText = styled.span`
+  color: #00251d;
+  font-weight: 400;
+  font-size: 12px;
 `;
 
 const VerifyButton = styled.button`
@@ -63,9 +74,8 @@ const VerifyButton = styled.button`
 const SectionTitle = styled.h3`
   font-size: 20px;
   color: #333;
-  margin-bottom: 15px;
   //border-bottom: 2px solid #eee;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 `;
 
 const Table = styled.table`
@@ -75,43 +85,45 @@ const Table = styled.table`
   margin-bottom: 30px;
   background-color: transparent;
   border-radius: 8px;
-
   border: 1px solid #397617;
-
   overflow: hidden;
 
   th,
   td {
-    padding: 16px 20px;
+    padding: 12px 10px; /* Зменшено відступи для запобігання накладанню */
     border-bottom: 1px solid #397617;
-  }
-  th:first-child,
-  td:first-child {
     text-align: left;
-    //color: #6a7c78;
+  }
+
+  /* Стилі для ДАНИХ (td) */
+  td:first-child {
     font-weight: 700;
     font-size: 16px;
   }
 
-  /* Налаштування ДРУГОЇ колонки (Значення: AlexBet99, 1996-12-15) */
-  th:last-child,
   td:last-child {
-    text-align: right; /* Відштовхуємо значення в правий край */
-    color: #00251d; /* Темний колір тексту */
-    font-weight: 700; /* Жирний шрифт, як на макеті */
+    text-align: right;
+    color: #00251d;
+    font-weight: 700;
     font-size: 16px;
   }
 
-  /* Стиль для самої шапки таблиці (Login History) */
+  /* Стиль для заголовків (th) */
   th {
-    background-color: rgba(57, 118, 23, 0.1); /* Легкий зелений фон для шапки */
+    height: 30px;
+    background-color: rgba(57, 118, 23, 0.1);
     color: #00251d;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 12px;
+    padding: 0 10px;
   }
 
-  /* Прибираємо лінію в найнижчого рядка, щоб вона не накладалася на зовнішню рамку */
+  th:last-child {
+    text-align: right;
+  }
+
+  /* Прибираємо лінію в найнижчого рядка */
   tr:last-child td {
     border-bottom: none;
   }
@@ -128,9 +140,34 @@ const FieldWrapper = styled.div`
   }
 `;
 
+const GenderButtonsWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end; /* Вирівнюємо по правому краю, як і весь текст у цій колонці */
+`;
+const GenderButton = styled.button`
+  background-color: ${(props) =>
+    props.$isActive ? "rgba(153, 177, 172, 1)" : "rgba(57, 118, 23, 1)"};
+
+  color: ${(props) => (props.$isActive ? "#00251d" : "#ffffff")};
+
+  border: none;
+  border-radius: 8px;
+  padding: 6px 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.85;
+  }
+`;
 // 1. Прибрали async і 2. Додали фігурні дужки { user }
 const AccountSettings = ({ user }) => {
   // 3. Беремо дані тільки з user.personalInfo, де лежать звичайні рядки
+  const [activeGender, setActiveGender] = useState(
+    user?.personalInfo?.gender || "Mr."
+  );
   const fieldIcons = {
     username: <ProfileIcon />,
     firstName: <ProfileIcon />,
@@ -188,7 +225,10 @@ const AccountSettings = ({ user }) => {
         <BannerLeft>
           {/* Тимчасова SVG іконка щита, потім заміниш на свою */}
           <Avatar src={user.personalInfo.avatarUrl} alt="User Avatar" />
-          <BannerText>Info</BannerText>
+          <TextContainer>
+            <BannerText>Info</BannerText>
+            <MemberInfoText>Member Info</MemberInfoText>
+          </TextContainer>
         </BannerLeft>
         <VerifyButton>Update</VerifyButton>
       </VerificationBanner>
@@ -204,7 +244,26 @@ const AccountSettings = ({ user }) => {
                   {item.field}
                 </FieldWrapper>
               </td>
-              <td>{item.value}</td>
+              <td>
+                {item.field === "Gender" ? (
+                  <GenderButtonsWrapper>
+                    <GenderButton
+                      $isActive={activeGender === "Mrs."}
+                      onClick={() => setActiveGender("Mrs.")}
+                    >
+                      Mrs.
+                    </GenderButton>
+                    <GenderButton
+                      $isActive={activeGender === "Mr."}
+                      onClick={() => setActiveGender("Mr.")}
+                    >
+                      Mr.
+                    </GenderButton>
+                  </GenderButtonsWrapper>
+                ) : (
+                  item.value
+                )}
+              </td>
             </tr>
           ))}
         </tbody>

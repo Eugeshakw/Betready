@@ -7,7 +7,7 @@ const SidebarWrapper = styled.aside`
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
   padding: 18px 20px;
-  width: 258px;
+  width: 300px;
 `;
 
 const UserInfoWrapper = styled.div`
@@ -73,6 +73,9 @@ const ProfileSidebar = ({ user, navItems, activeTabId, onTabClick }) => {
             isLast={index === navItems.length - 1}
             isActive={item.id === activeTabId}
             onClick={() => onTabClick(item.id)}
+            group={item.group}
+            activeTabId={activeTabId}
+            onSubTabClick={onTabClick}
           />
         ))}
       </div>

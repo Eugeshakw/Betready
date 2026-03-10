@@ -14,6 +14,10 @@ import BellIcon from "../../assets/svg/profile/Bell.svg";
 import LogoutIcon from "../../assets/svg/profile/Shutdown.svg";
 import OtherIcon from "../../assets/svg/profile/View More.svg";
 
+import KeyIcon from "../../assets/svg/profile/Key.svg";
+import TwoFaIcon from "../../assets/svg/profile/Voice Id.svg";
+import MultipleIcon from "../../assets/svg/profile/Multiple Devices.svg";
+
 import { mockUser } from "../ProfileSettings/mockUser.data.js";
 
 export const ProfileLayoutWrapper = styled.div`
@@ -36,8 +40,33 @@ export const ProfileInnerWrapper = styled.div`
 
 const ProfileLayout = () => {
   const navItems = [
-    { id: "account-settings", icon: ProfileIcon, text: "Account Settings" },
-    { id: "account-security", icon: SecurityIcon, text: "Account Security" },
+    {
+      id: "account-settings",
+      icon: ProfileIcon,
+      text: "Account Settings",
+    },
+    {
+      id: "account-security",
+      icon: SecurityIcon,
+      text: "Account Security",
+      group: [
+        {
+          id: "account-change-password",
+          icon: KeyIcon,
+          text: "CHANGE PASSWORD",
+        },
+        {
+          id: "account-2fa",
+          icon: TwoFaIcon,
+          text: "2FA Authentication",
+        },
+        {
+          id: "account-devices",
+          icon: MultipleIcon,
+          text: "Devices",
+        },
+      ],
+    },
     { id: "deposit", icon: DepIcon, text: "Deposit" },
     { id: "bets", icon: BetsIcon, text: "Bets" },
     { id: "history", icon: HistoryIcon, text: "History" },
@@ -59,8 +88,17 @@ const ProfileLayout = () => {
     setActiveTabId(id);
   };
 
-  const activeTab = navItems.find((item) => item.id === activeTabId);
-
+  let activeTab = navItems.find((item) => item.id === activeTabId);
+  if (!activeTab) {
+    navItems.forEach((item) => {
+      if (item.group) {
+        const foundSub = item.group.find((sub) => sub.id === activeTabId);
+        if (foundSub) {
+          activeTab = foundSub;
+        }
+      }
+    });
+  }
   return (
     <ProfileLayoutWrapper>
       <ProfileInnerWrapper>
