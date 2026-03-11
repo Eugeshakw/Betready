@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import ProfileSidebar from "./ProfileSidebar";
 import ProfileContent from "./ProfileContent";
+
 import ProfileIcon from "../../assets/svg/profile/Profile.svg";
 import SecurityIcon from "../../assets/svg/profile/Protect.svg";
 import DepIcon from "../../assets/svg/profile/Stack of Money.svg";
@@ -18,7 +19,9 @@ import KeyIcon from "../../assets/svg/profile/Key.svg";
 import TwoFaIcon from "../../assets/svg/profile/Voice Id.svg";
 import MultipleIcon from "../../assets/svg/profile/Multiple Devices.svg";
 
-import { mockUser } from "../ProfileSettings/mockUser.data.js";
+import MerchantIcon from "../../assets/svg/profile/Merchant Account.svg";
+import SafeIcon from "../../assets/svg/profile/Safe In.svg";
+import WithdrawIcon from "../../assets/svg/profile/Request Money.svg";
 
 export const ProfileLayoutWrapper = styled.div`
   background-color: #397617;
@@ -38,7 +41,7 @@ export const ProfileInnerWrapper = styled.div`
   padding-right: 20px;
 `;
 
-const ProfileLayout = () => {
+const ProfileLayout = ({ user }) => {
   const navItems = [
     {
       id: "account-settings",
@@ -67,7 +70,28 @@ const ProfileLayout = () => {
         },
       ],
     },
-    { id: "deposit", icon: DepIcon, text: "Deposit" },
+    {
+      id: "bank-account",
+      icon: DepIcon,
+      text: "Deposit",
+      group: [
+        {
+          id: "deposit-bank",
+          icon: MerchantIcon,
+          text: "Bank Accounts",
+        },
+        {
+          id: "deposit-transaction",
+          icon: SafeIcon,
+          text: "Deposit Transactions",
+        },
+        {
+          id: "withdraw-transaction",
+          icon: WithdrawIcon,
+          text: "Withdraw Transactions",
+        },
+      ],
+    },
     { id: "bets", icon: BetsIcon, text: "Bets" },
     { id: "history", icon: HistoryIcon, text: "History" },
     {
@@ -106,9 +130,9 @@ const ProfileLayout = () => {
           navItems={navItems}
           activeTabId={activeTabId}
           onTabClick={handleTabClick}
-          user={mockUser}
+          user={user}
         />
-        <ProfileContent activeTab={activeTab} user={mockUser} />
+        <ProfileContent activeTab={activeTab} user={user} />
       </ProfileInnerWrapper>
     </ProfileLayoutWrapper>
   );

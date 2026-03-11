@@ -48,3 +48,30 @@ export const mockUser = {
     },
   },
 };
+
+export const loginHistory = [
+  {
+    device: "Windows",
+    type: "PC",
+    ip: "192.168.1.1",
+    browser: "Chrome",
+    country: "USA",
+    status: "Active",
+  },
+  {
+    device: "Android",
+    type: "Phone",
+    ip: "10.0.0.5",
+    browser: "Firefox",
+    country: "Canada",
+    status: "Inactive",
+  },
+  {
+    device: "macOS",
+    type: "PC",
+    ip: "172.16.0.10",
+    browser: "Safari",
+    country: "USA",
+    status: "Inactive",
+  },
+];

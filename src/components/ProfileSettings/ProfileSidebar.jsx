@@ -50,6 +50,7 @@ export const Separator = styled.hr`
 `;
 
 const ProfileSidebar = ({ user, navItems, activeTabId, onTabClick }) => {
+  user = user.mockUser;
   return (
     <SidebarWrapper>
       {user && (

@@ -25,7 +25,7 @@ const FormWrapper = styled.div`
   max-width: 600px;
 `;
 
-const FormTitle = styled.h3`
+export const FormTitle = styled.h3`
   font-size: 20px;
   color: #00251d;
   margin-bottom: 24px;

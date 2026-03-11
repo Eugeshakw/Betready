@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import ProfileIcon from "../../../../../assets/svg/profile/Profile.svg";
-import EmailIcon from "../../../../../assets/svg/profile/Email.svg";
-import PhoneIcon from "../../../../../assets/svg/profile/Phone.svg";
-import BirthDateIcon from "../../../../../assets/svg/profile/Birth Date.svg";
-import GenderIcon from "../../../../../assets/svg/profile/Gender.svg";
-import CountryIcon from "../../../../../assets/svg/profile/Country.svg";
-import CityIcon from "../../../../../assets/svg/profile/City Buildings.svg";
+import ProfileIcon from "../../../assets/svg/profile/Profile.svg";
+import EmailIcon from "../../../assets/svg/profile/Email.svg";
+import PhoneIcon from "../../../assets/svg/profile/Phone.svg";
+import BirthDateIcon from "../../../assets/svg/profile/Birth Date.svg";
+import GenderIcon from "../../../assets/svg/profile/Gender.svg";
+import CountryIcon from "../../../assets/svg/profile/Country.svg";
+import CityIcon from "../../../assets/svg/profile/City Buildings.svg";
+import PcIcon from "../../../assets/svg/profile/iMac.svg";
+import IPhoneIcon from "../../../assets/svg/profile/iPhone SE.svg";
 
-import { Avatar } from "../../../ProfileSidebar.jsx";
+import { Avatar } from "../ProfileSidebar.jsx";
 
 const AccountSettingsWrapper = styled.div``;
 
@@ -55,7 +57,7 @@ const MemberInfoText = styled.span`
   font-size: 12px;
 `;
 
-const VerifyButton = styled.button`
+export const VerifyButton = styled.button`
   background-color: #397617;
   color: #ffffff;
   border: none;
@@ -78,7 +80,7 @@ const SectionTitle = styled.h3`
   padding-bottom: 8px;
 `;
 
-const Table = styled.table`
+export const Table = styled.table`
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
@@ -88,39 +90,71 @@ const Table = styled.table`
   border: 1px solid #397617;
   overflow: hidden;
 
+  table-layout: fixed;
+
   th,
   td {
-    padding: 12px 10px; /* Зменшено відступи для запобігання накладанню */
+    padding: 12px 10px;
     border-bottom: 1px solid #397617;
-    text-align: left;
+    text-align: left; /* Базове вирівнювання по лівому краю для першої колонки */
+    word-wrap: break-word;
+    vertical-align: middle;
   }
 
-  /* Стилі для ДАНИХ (td) */
+  /* 🟢 МАГІЯ ТУТ: Якщо це таблиця історії, вирівнюємо всі колонки, КРІМ першої, ПО ЦЕНТРУ */
+  ${(props) =>
+    (props.$isHistory || props.$isMethods) &&
+    `
+    th:not(:first-child),
+    td:not(:first-child) {
+      text-align: center;
+    }
+    td {
+      font-weight: 700;
+    }
+  `}
+
+  /* 🟢 А якщо це перша таблиця (Інфо), вирівнюємо її другу колонку ПО ПРАВОМУ краю */
+  ${(props) =>
+    !props.$isHistory &&
+    !props.$isMethods &&
+    `
+    td:last-child {
+      text-align: right;
+    }
+  `}
+
+  /* Ширина та шрифт ПЕРШОЇ колонки */
+  th:first-child {
+    padding-left: 20px;
+    width: 50%;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
   td:first-child {
+    padding-left: 20px;
+    width: 50%;
     font-weight: 700;
     font-size: 16px;
   }
 
+  /* Шрифт ОСТАННЬОЇ колонки (для обох таблиць) */
   td:last-child {
-    text-align: right;
     color: #00251d;
     font-weight: 700;
     font-size: 16px;
   }
 
-  /* Стиль для заголовків (th) */
+  /* Стиль для шапки (th) */
   th {
-    height: 30px;
+    height: auto;
     background-color: rgba(57, 118, 23, 0.1);
     color: #00251d;
     font-weight: 400;
     text-transform: uppercase;
     font-size: 12px;
-    padding: 0 10px;
-  }
-
-  th:last-child {
-    text-align: right;
+    padding: 8px 10px;
   }
 
   /* Прибираємо лінію в найнижчого рядка */
@@ -128,15 +162,15 @@ const Table = styled.table`
     border-bottom: none;
   }
 `;
-const FieldWrapper = styled.div`
+export const FieldWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 12px; /* Відстань між іконкою і текстом */
+  gap: 12px;
 
   svg {
     width: 18px;
     height: 18px;
-    fill: currentColor; /* Автоматично бере колір тексту (#6a7c78) */
+    fill: currentColor;
   }
 `;
 
@@ -153,7 +187,7 @@ const GenderButton = styled.button`
 
   border: none;
   border-radius: 8px;
-  padding: 6px 30px;
+  padding: 6px 24px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -162,9 +196,28 @@ const GenderButton = styled.button`
     opacity: 0.85;
   }
 `;
-// 1. Прибрали async і 2. Додали фігурні дужки { user }
-const AccountSettings = ({ user }) => {
-  // 3. Беремо дані тільки з user.personalInfo, де лежать звичайні рядки
+
+export const StatusBadge = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 24px;
+  // height: 40px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(153, 177, 172, 1);
+  /* 🟢 Розумні кольори залежно від статусу */
+  background-color: ${(props) =>
+    props.$status?.toLowerCase() === "active"
+      ? "rgba(57, 118, 23, 0.15)"
+      : "rgba(153, 177, 172, 0.5)"};
+
+  color: ${(props) =>
+    props.$status?.toLowerCase() === "active" ? "#397617" : "#6a7c78"};
+`;
+
+const AccountSettings = ({ user, loginHistory }) => {
   const [activeGender, setActiveGender] = useState(
     user?.personalInfo?.gender || "Mr."
   );
@@ -194,30 +247,6 @@ const AccountSettings = ({ user }) => {
             return { field: fieldName, value: value, icon: fieldIcons[key] };
           })
       : [];
-
-  const loginHistory = [
-    {
-      device: "Desktop (Windows)",
-      ip: "192.168.1.1",
-      browser: "Chrome",
-      country: "USA",
-      status: "Success",
-    },
-    {
-      device: "Mobile (Android)",
-      ip: "10.0.0.5",
-      browser: "Firefox",
-      country: "Canada",
-      status: "Success",
-    },
-    {
-      device: "Desktop (macOS)",
-      ip: "172.16.0.10",
-      browser: "Safari",
-      country: "USA",
-      status: "Failed",
-    },
-  ];
 
   return (
     <AccountSettingsWrapper>
@@ -270,7 +299,7 @@ const AccountSettings = ({ user }) => {
       </Table>
 
       <SectionTitle>Login History</SectionTitle>
-      <Table>
+      <Table $isHistory>
         <thead>
           <tr>
             <th>Device</th>
@@ -283,11 +312,18 @@ const AccountSettings = ({ user }) => {
         <tbody>
           {loginHistory.map((item, index) => (
             <tr key={index}>
-              <td>{item.device}</td>
+              <td>
+                <FieldWrapper>
+                  {item.type == "PC" ? <PcIcon /> : <IPhoneIcon />}
+                  {item.device}
+                </FieldWrapper>
+              </td>
               <td>{item.ip}</td>
               <td>{item.browser}</td>
               <td>{item.country}</td>
-              <td>{item.status}</td>
+              <td>
+                <StatusBadge $status={item.status}>{item.status}</StatusBadge>
+              </td>
             </tr>
           ))}
         </tbody>

@@ -1,8 +1,12 @@
 import styled from "styled-components";
 
-import AccountSettings from "./tabs/subs/security/AccountSettings";
-import AccountSecurity from "./tabs/subs/security/AccountSecurity";
+import AccountSettings from "./tabs/AccountSettings.jsx";
+import AccountSecurity from "./tabs/subs/security/AccountSecurity.jsx";
 import TwoFa from "./tabs/subs/security/2fa/2fa.jsx";
+import Devices from "./tabs/subs/security/Devices.jsx";
+import Bank from "./tabs/subs/deposit/Bank.jsx";
+import DepositTransactions from "./tabs/subs/deposit/DepositTransaction.jsx";
+import WidthrawTransactions from "./tabs/subs/deposit/WidthdrawTransaction.jsx";
 
 import HideIcon from "../../assets/svg/profile/Invisible.svg";
 
@@ -60,7 +64,7 @@ const HeaderLeft = styled.div`
   gap: 9px;
 `;
 
-const HideButton = styled.button`
+export const HideButton = styled.button`
   /* 1. Змінюємо на flex, щоб запрацював gap */
   display: flex;
 
@@ -105,7 +109,6 @@ const ProfileContent = ({ activeTab, user }) => {
 
   const IconComponent = activeTab.icon;
 
-  console.log(activeTab);
   return (
     <ContentWrapper>
       <TabHeader>
@@ -126,10 +129,21 @@ const ProfileContent = ({ activeTab, user }) => {
       </TabHeader>
 
       <div>
-        {activeTab.id === "account-settings" && <AccountSettings user={user} />}
+        {activeTab.id === "account-settings" && (
+          <AccountSettings
+            user={user.mockUser}
+            loginHistory={user.loginHistory}
+          />
+        )}
         {/* Add conditional rendering for other tabs here */}
         {activeTab.id === "account-change-password" && <AccountSecurity />}
         {activeTab.id === "account-2fa" && <TwoFa />}
+        {activeTab.id === "account-devices" && (
+          <Devices loginHistory={user.loginHistory} />
+        )}
+        {activeTab.id === "deposit-bank" && <Bank />}
+        {activeTab.id === "deposit-transaction" && <DepositTransactions />}
+        {activeTab.id === "withdraw-transaction" && <WidthrawTransactions />}
       </div>
     </ContentWrapper>
   );

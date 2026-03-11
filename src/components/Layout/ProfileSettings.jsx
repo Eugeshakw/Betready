@@ -7,7 +7,8 @@ import { Sidebar } from "./Sidebar";
 import { TopBar } from "./TopBar";
 import { LeagueNavBar } from "../TopEvents/LeagueNavBar/LeagueNavBar.jsx";
 import { LayoutWrapper, ContentWrapper } from "./PageLayout.jsx";
-import { mockUser } from "../ProfileSettings/mockUser.data.js";
+
+import * as mockUser from "../ProfileSettings/mocks/mockUser.data.js";
 
 import ProfileLayout from "../ProfileSettings/ProfileLayout";
 import ProfileSidebar from "../ProfileSettings/ProfileSidebar";
@@ -22,10 +23,7 @@ const ProfileSettings = () => {
 
       <ContentWrapper>
         <Sidebar />
-        <ProfileLayout>
-          <ProfileSidebar user={mockUser} />
-          <ProfileContent />
-        </ProfileLayout>
+        <ProfileLayout user={mockUser} />
       </ContentWrapper>
 
       <Footer />
