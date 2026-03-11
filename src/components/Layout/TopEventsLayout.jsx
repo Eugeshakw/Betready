@@ -6,10 +6,7 @@ import { MatchesSection } from '../TopEvents/MatchesSection/MatchesSection'
 import { StandingsBlock } from '../TopEvents/StandingsBlock/StandingsBlock'
 import { TopPlayersBlock } from '../TopEvents/TopPlayersBlock/TopPlayersBlock'
 import { WhoWillWinBlock } from '../TopEvents/WhoWillWinBlock/WhoWillWinBlock'
-import { Footer } from './Footer'
-import { Header } from './Header'
 import { Sidebar } from './Sidebar'
-import { TopBar } from './TopBar'
 
 const LayoutWrapper = styled.div`
 	display: flex;
@@ -35,8 +32,6 @@ const MainColumn = styled.div`
 const TopEventsLayout = () => {
 	return (
 		<LayoutWrapper>
-			<TopBar />
-			<Header />
 			<LeagueNavBar />
 
 			<ContentWrapper>
@@ -50,8 +45,6 @@ const TopEventsLayout = () => {
 					<TopPlayersBlock />
 				</MainColumn>
 			</ContentWrapper>
-
-			<Footer />
 		</LayoutWrapper>
 	)
 }

@@ -10,6 +10,7 @@ import { SharedLayout } from "./components/SharedLayout";
 const HomePage = lazy(() => import("./pages/Home"));
 const TopEventsPage = lazy(() => import('./pages/TopEvents'))
 const ProfilePage = lazy(() => import('./pages/Profile'))
+const GamesPage = lazy(() => import('./pages/Games'))
 
 export const App = () => {
   return (
@@ -19,6 +20,7 @@ export const App = () => {
           <Route index element={<HomePage />} />
           <Route path="top-event" element={<TopEventsPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="games" element={<GamesPage />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
