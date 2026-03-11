@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { TopBar } from "./TopBar";
-import { Header } from "./Header";
 import { Sidebar } from "./Sidebar";
-import { MainContent } from "./MainContent";
-import Footer from "./Footer";
 import RightSidebar from "./RightSidebar";
 
 export const LayoutWrapper = styled.div`
@@ -19,15 +16,12 @@ export const ContentWrapper = styled.div`
   flex: 1;
 `;
 
-export const PageLayout = () => (
+export const PageLayout = ({ children }) => (
   <LayoutWrapper>
-    <TopBar />
-    <Header />
     <ContentWrapper>
       <Sidebar />
-      <MainContent />
+      {children}
       <RightSidebar />
     </ContentWrapper>
-    <Footer />
   </LayoutWrapper>
 );
