@@ -11,7 +11,15 @@ const DepositTransactions = () => {
   return (
     <>
       <Elems.ToolbarWrapper>
-        <PaymentFilters />
+        <PaymentFilters
+          buttons={[
+            "All Groups",
+            "Instant Transaction",
+            "Bank Transfer Methods",
+            "Virtual Wallet",
+            "Other",
+          ]}
+        />
 
         <Elems.AllMethodsButton>
           <ClockIcon></ClockIcon>

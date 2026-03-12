@@ -157,6 +157,15 @@ export const Table = styled.table`
     padding: 8px 10px;
   }
 
+  .empty-state {
+    height: 80px;
+    text-align: center !important;
+    vertical-align: middle !important;
+    font-weight: 400 !important;
+    font-size: 16px;
+    padding-left: 0 !important;
+  }
+
   /* Прибираємо лінію в найнижчого рядка */
   tr:last-child td {
     border-bottom: none;

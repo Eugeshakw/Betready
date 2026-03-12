@@ -3,28 +3,33 @@ import styled from "styled-components";
 export const FilterWrapper = styled.div`
   display: inline-flex;
   align-items: center;
-  margin-top: 20px;
   gap: 10px;
   border: 1px solid #397617;
   border-radius: 8px;
-  margin-bottom: 24px;
+  ${(props) =>
+    !props.$isHistory &&
+    `
+    margin-top: 20px;
+    margin-bottom: ${props.$isVip ? "10px" : "24px"};
+  `}
   flex-wrap: wrap;
   padding: 6px;
 `;
 
 export const FilterButton = styled.button`
   background-color: ${(props) => (props.$isActive ? "#397617" : "transparent")};
-  color: ${(props) => (props.$isActive ? "#ffffff" : "#397617")};
+  color: ${(props) => (props.$isActive ? "#ffffff" : "#00251D")};
 
   /* 🟢 МАГІЯ ТУТ: Явно кажемо браузеру прибрати всі стандартні рамки */
   border: none;
 
   border-radius: 6px;
-  padding: 10px 16px;
+  padding: ${(props) => (!props.$isHistory ? `10px 16px` : "8px 12px")};
   font-weight: 700;
   font-size: 14px;
   cursor: pointer;
   transition: all 0.2s ease;
+  ${(props) => !props.$isHistory && `white-space: nowrap`}
 
   &:hover {
     background-color: ${(props) =>
@@ -38,6 +43,12 @@ export const ToolbarWrapper = styled.div`
   align-items: center;
   justify-content: space-between; /* Розштовхує елементи по краях */
   width: 100%;
+  ${(props) =>
+    !props.$isHistory &&
+    `
+    flex-wrap: wrap; 
+    gap: 16px; /* Відстань між фільтрами та датами, якщо вони стануть у два рядки */
+  `}
 `;
 
 export const AllMethodsButton = styled.button`

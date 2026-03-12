@@ -93,7 +93,11 @@ const ProfileLayout = ({ user }) => {
       ],
     },
     { id: "bets", icon: BetsIcon, text: "Bets" },
-    { id: "history", icon: HistoryIcon, text: "History" },
+    {
+      id: "transaction-history",
+      icon: HistoryIcon,
+      text: "Transactions History",
+    },
     {
       id: "offers-bonuses",
       icon: OfferAndBonusesIcon,

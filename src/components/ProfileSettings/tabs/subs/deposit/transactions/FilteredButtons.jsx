@@ -2,20 +2,19 @@ import { useState } from "react";
 import * as Elems from "./transaction.styles.js";
 import ChevronIcon from "../../../../../../assets/svg/profile/Forward.svg";
 
-const PaymentFilters = ({ $isWidthdraw }) => {
-  const categories = $isWidthdraw
-    ? ["All Groups", "Instant Transaction", "Bank Transfer Methods", "Papara"]
-    : [
-        "All Groups",
-        "Instant Transaction",
-        "Bank Transfer Methods",
-        "Virtual Wallet",
-        "Other",
-      ];
-  const [activeCategory, setActiveCategory] = useState("All Groups");
+const PaymentFilters = ({
+  buttons,
+  $isHistory,
+  $isWidthdraw,
+  $isBonuses,
+  $isTournaments,
+  $isVip,
+}) => {
+  const categories = buttons;
+  const [activeCategory, setActiveCategory] = useState(categories[0]);
 
   return (
-    <Elems.FilterWrapper>
+    <Elems.FilterWrapper $isHistory={$isHistory} $isVip={$isVip}>
       {categories.map((category) => (
         <Elems.FilterButton
           key={category}
@@ -25,9 +24,12 @@ const PaymentFilters = ({ $isWidthdraw }) => {
           {category}
         </Elems.FilterButton>
       ))}
-      {!$isWidthdraw && (
-        <ChevronIcon style={{ transform: "rotate(180deg)" }}></ChevronIcon>
-      )}
+      {!$isWidthdraw &&
+        !$isHistory &&
+        !$isBonuses &&
+        !$isBonuses &&
+        !$isTournaments &&
+        !$isVip && <ChevronIcon style={{ transform: "rotate(180deg)" }} />}
     </Elems.FilterWrapper>
   );
 };

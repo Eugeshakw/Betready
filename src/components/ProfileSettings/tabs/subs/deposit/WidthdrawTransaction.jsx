@@ -11,7 +11,15 @@ const WidthTransactions = () => {
   return (
     <>
       <Elems.ToolbarWrapper>
-        <PaymentFilters $isWidthdraw />
+        <PaymentFilters
+          buttons={[
+            "All Groups",
+            "Instant Transaction",
+            "Bank Transfer Methods",
+            "Papara",
+          ]}
+          $isWidthdraw={true}
+        />
 
         <Elems.AllMethodsButton>
           <ClockIcon></ClockIcon>

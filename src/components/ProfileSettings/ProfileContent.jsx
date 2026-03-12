@@ -7,6 +7,11 @@ import Devices from "./tabs/subs/security/Devices.jsx";
 import Bank from "./tabs/subs/deposit/Bank.jsx";
 import DepositTransactions from "./tabs/subs/deposit/DepositTransaction.jsx";
 import WidthrawTransactions from "./tabs/subs/deposit/WidthdrawTransaction.jsx";
+import Bets from "./tabs/Bets.jsx";
+import History from "./tabs/History.jsx";
+import OfferBonuses from "./tabs/OfferBonuses.jsx";
+import Tournaments from "./tabs/Tournaments.jsx";
+import Vip from "./tabs/Vip.jsx";
 
 import HideIcon from "../../assets/svg/profile/Invisible.svg";
 
@@ -144,6 +149,11 @@ const ProfileContent = ({ activeTab, user }) => {
         {activeTab.id === "deposit-bank" && <Bank />}
         {activeTab.id === "deposit-transaction" && <DepositTransactions />}
         {activeTab.id === "withdraw-transaction" && <WidthrawTransactions />}
+        {activeTab.id === "bets" && <Bets />}
+        {activeTab.id === "transaction-history" && <History />}
+        {activeTab.id === "offers-bonuses" && <OfferBonuses />}
+        {activeTab.id === "tournaments" && <Tournaments />}
+        {activeTab.id === "vip-club" && <Vip />}
       </div>
     </ContentWrapper>
   );
